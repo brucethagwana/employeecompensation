@@ -2,9 +2,9 @@ package com.bruce.thagwana;
 
 public class Balance {
 
-    private long availableBalance;
+    private double availableBalance;
 
-    public Balance(long availableBalance) {
+    public Balance(double availableBalance) {
         this.availableBalance = availableBalance;
     }
 

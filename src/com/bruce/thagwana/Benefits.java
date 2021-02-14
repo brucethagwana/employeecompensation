@@ -1,6 +1,5 @@
 package com.bruce.thagwana;
 
-
 public class Benefits {
 
     private double salary;
@@ -12,7 +11,6 @@ public class Benefits {
     private double studyFeesAllowance;
     private double otherAllowances;
     private Balance accreditedBalance;
-    private final MonthsOfTheYear monthsOfTheYear;
 
     public Benefits(double salary, double bonus, double medicalInsurance, double petrolAllowance, double houseAllowance,
                     double funeralAllowance, double studyFeesAllowance, double otherAllowances, Balance accreditedBalance,
@@ -26,7 +24,6 @@ public class Benefits {
         this.studyFeesAllowance = studyFeesAllowance;
         this.otherAllowances = otherAllowances;
         this.accreditedBalance = accreditedBalance;
-        this.monthsOfTheYear = monthsOfTheYear;
     }
 
     public void Salary() {
@@ -98,4 +95,14 @@ public class Benefits {
     public void setAccreditedBalance(Balance accreditedBalance) {
         this.accreditedBalance = accreditedBalance;
     }
+
+    public double getMedicalInsurance() {
+        return medicalInsurance;
+    }
+
+    public double getFuneralAllowance() {
+        return funeralAllowance;
+    }
+
+
 }
