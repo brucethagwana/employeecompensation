@@ -1,15 +1,19 @@
 package com.bruce.thagwana;
 
+//Assets for 360000.00 salary range
+
 public class Assets {
 
     private final Benefits profits;
     private final Deductions welfare;
     private final OtherDeductions gains;
+    private final MonthsOfTheYear period;
 
     public Assets(Benefits profits, Deductions welfare, OtherDeductions gains, MonthsOfTheYear period) {
         this.profits = profits;
         this.welfare = welfare;
         this.gains = gains;
+        this.period = period;
 
     }
 

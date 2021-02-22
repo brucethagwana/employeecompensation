@@ -104,5 +104,11 @@ public class Benefits {
         return funeralAllowance;
     }
 
+    public double getSalary() {
+        return salary;
+    }
 
+    public double getBonus() {
+        return bonus;
+    }
 }

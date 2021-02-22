@@ -9,14 +9,16 @@ public class MonthsOfTheYear {
     private final int dateOfTheWeek;
     private final int calendarYear;
     private final String time;
+    private final Benefits remuneration;
     private final ArrayList<String> months;
     private final ArrayList<String> dayOfTheWeek;
 
-    public MonthsOfTheYear(boolean federalHoliday, int dateOfTheWeek, int calendarYear, String time) {
+    public MonthsOfTheYear(boolean federalHoliday, int dateOfTheWeek, int calendarYear, String time, Benefits remuneration) {
         this.federalHoliday = federalHoliday;
         this.dateOfTheWeek = dateOfTheWeek;
         this.calendarYear = calendarYear;
         this.time = time;
+        this.remuneration = remuneration;
         this.months = new ArrayList<>();
         this.dayOfTheWeek = new ArrayList<>();
     }
@@ -36,10 +38,29 @@ public class MonthsOfTheYear {
         this.months.add(11, "December");
     }
 
+    public double incentive (double earnings, double dividend) {
+        return earnings + dividend;
+    }
+
+    public void salaryWithBonus(ArrayList<String> months, String calendarMonth) {
+        for(int i = 0; i == 0; i++) {
+            if(calendarMonth.equals(months.get(11))) {
+                System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + " Total Share: " + incentive(remuneration.getSalary()
+                        + remuneration.getBonus(), i));
+            } else {
+                System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + " Total Share: " + incentive(remuneration.getSalary()
+                        + 0, i));
+            }
+        }
+    }
+
     public void printCurrentMonth(ArrayList<String> months, String calendarDivision) {
         if(!Objects.equals(calendarDivision, "December")) {
             System.out.println("Bonus is paid in " + months.get(11) + " unless otherwise.");
-        } else if(calendarDivision.equals("December")) {
+        }
+        if(calendarDivision.equals(months.get(11))) {
+            System.out.println("Bonus available balance: " + remuneration.getBonus());
+            System.out.println("\t");
             System.out.println("Bonus will be paid into your account, thank you for your service." + "\n"
                     + "Please remember to report any form of harassment.");
         }
@@ -62,9 +83,9 @@ public class MonthsOfTheYear {
         } else {
             System.out.println("End of the financial year, better luck next year.");
         }
-        if ((presentDay.equals(dayOfTheWeek.get(0))) || (presentDay.equals(dayOfTheWeek.get(1))) || (presentDay.equals(dayOfTheWeek.get(2))) ||
-                (presentDay.equals(dayOfTheWeek.get(3)) || (presentDay.equals(dayOfTheWeek.get(4))))) {
-            System.out.println("Salary will be paid into your account.");
+        if ((presentDay.equals(dayOfTheWeek.get(0))) || (presentDay.equals(dayOfTheWeek.get(1))) || (presentDay.equals(dayOfTheWeek.get(2)))
+                || (presentDay.equals(dayOfTheWeek.get(3)) || (presentDay.equals(dayOfTheWeek.get(4))))) {
+            System.out.println("Your account has been credited.");
         } else if((presentDay.equals(dayOfTheWeek.get(5))) || (presentDay.equals(dayOfTheWeek.get(6)))) {
             System.out.println("Salary paid earlier than expected.");
         } else{
