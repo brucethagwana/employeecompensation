@@ -1,54 +1,103 @@
 package com.bruce.thagwana;
 
-//Assets for 360000.00 salary range
-
 public class Assets {
 
     private final Benefits profits;
     private final Deductions welfare;
     private final OtherDeductions gains;
-    private final MonthsOfTheYear period;
+    private final Balance equate;
+    private final MonthsOfTheYear timeUnit;
 
-    public Assets(Benefits profits, Deductions welfare, OtherDeductions gains, MonthsOfTheYear period) {
+    public Assets(Benefits profits, Deductions welfare, OtherDeductions gains, Balance equate, MonthsOfTheYear timeUnit) {
         this.profits = profits;
         this.welfare = welfare;
         this.gains = gains;
-        this.period = period;
-
+        this.equate = equate;
+        this.timeUnit = timeUnit;
     }
 
-    public double interestRate(double amount, double INT_RATE) {
-        return (amount * (INT_RATE * 9));
+    //
+    public double interestRate(double amount, int intRate) {
+        return amount * intRate * 6.5;
+    }
+
+    public double assetsInterestOtherDiminutions() {
+        return 0;
     }
 
     public void accessionOne() {
-        for(int i = 1; i == 1; i++) {
-            System.out.println("UIF: " + interestRate(welfare.getUIF(), i));
-            System.out.println("SARS: " + interestRate(welfare.getTAX(), i));
-            System.out.println("Provident Fund: " + interestRate(gains.getProvidentFund(), i));
-            System.out.println("Other Diminutions: " + interestRate(gains.getOtherDiminutions(), i));
-            System.out.println("Other Taxation processing.");
+        if(equate.getAvailableBalance() == profits.getSalary()) {
+            for(int i = 1; i == 1; i++) {
+                System.out.println("UIF: " + String.format("%.2f", interestRate(welfare.decemberDerivativeOne(), i)));
+                System.out.println("SARS: " + String.format("%.2f", interestRate(welfare.decemberDerivativeOne(), i)));
+                System.out.println("Provident Fund: " + String.format("%.2f", interestRate(gains.decemberDerivativeTwo(), i)));
+                System.out.println("Other Diminutions: " + String.format("%.2f", assetsInterestOtherDiminutions()));
+                System.out.println("Other Taxation Processing.");
+            }
+        } else if(equate.getAvailableBalance() == profits.getSalary() + profits.getBonus()) {
+            for(int i = 1; i == 1; i++) {
+                System.out.println("UIF: " + String.format("%.2f", interestRate(welfare.decemberDerivativeOne(), i)));
+                System.out.println("SARS: " + String.format("%.2f", interestRate(welfare.decemberDerivativeOne(), i)));
+                System.out.println("Provident Fund: " + String.format("%.2f", interestRate(gains.decemberDerivativeTwo(), i)));
+                System.out.println("Other Diminutions: " + String.format("%.2f", assetsInterestOtherDiminutions()));
+                System.out.println("Other Taxation Processing.");
+            }
+        } else {
+            System.out.println("The provision is unacceptable.");
         }
     }
 
     public void accessionTwo() {
-        for(int i = 1; i == 1; i++) {
-            System.out.println("Medical Insurance available balance: " + interestRate(profits.getMedicalInsurance(), i));
-            System.out.println("Funeral Allowance available balance: " + interestRate(profits.getFuneralAllowance(), i));
+        if(equate.getAvailableBalance() == profits.getSalary()) {
+            for(int i = 1; i == 1; i++) {
+                System.out.println("Medical Insurance: " + String.format("%.2f", interestRate(profits.decemberDerivativeThree(), i)));
+                System.out.println("Funeral Allowance: " + String.format("%.2f", interestRate(profits.decemberDerivativeThree(), i)));
+            }
+        } else if(profits.getSalary() + profits.getBonus() == equate.getAvailableBalance()) {
+            for(int i = 1; i == 1; i++) {
+                System.out.println("Medical Insurance: " + String.format("%.2f", interestRate(profits.decemberDerivativeThree(), i)));
+                System.out.println("Funeral Allowance: " + String.format("%.2f", interestRate(profits.decemberDerivativeThree(), i)));
+            }
+        } else {
+            System.out.println("The provision is unacceptable.");
         }
     }
 
     public void aggregateOne() {
-        for(int i = 1; i == 1; i++ ) {
-            System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + " Total Capital Gains: " + interestRate(welfare.getUIF() +
-                    welfare.getTAX() + gains.getProvidentFund() + gains.getOtherDiminutions(), i));
+        if(equate.getAvailableBalance() == profits.getSalary()) {
+            for(int i = 1; i == 1; i++ ) {
+                System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" +
+                        " Total Capital Gains: " + String.format("%.2f", interestRate(welfare.decemberDerivativeOne() +
+                        welfare.decemberDerivativeOne() + gains.decemberDerivativeTwo(), i)));
+            }
+        } else if(profits.getSalary() + profits.getBonus() == equate.getAvailableBalance()) {
+            for(int i = 1; i == 1; i++ ) {
+                System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" +
+                        " Total Capital Gains: " + String.format("%.2f", interestRate(welfare.decemberDerivativeOne() +
+                        welfare.decemberDerivativeOne() + gains.decemberDerivativeTwo(), i)));
+            }
+        } else {
+            System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" +
+                    "The provision is unacceptable.");
         }
     }
 
     public void aggregateTwo() {
-        for(int i = 1; i == 1; i++ ) {
-            System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + " Total Insurance Proceeds: " + interestRate(profits.getMedicalInsurance()
-                    + profits.getFuneralAllowance(), i));
+        if(equate.getAvailableBalance() == profits.getSalary()) {
+            for(int i = 1; i == 1; i++ ) {
+                System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" +
+                        " Total Insurance Proceeds: " + String.format("%.2f", interestRate(profits.decemberDerivativeThree() +
+                        profits.decemberDerivativeThree(), i)));
+            }
+        } else if(profits.getSalary() + profits.getBonus() == equate.getAvailableBalance()) {
+            for(int i = 1; i == 1; i++ ) {
+                System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" +
+                        " Total Insurance Proceeds: " + String.format("%.2f", interestRate(profits.decemberDerivativeThree() +
+                        profits.decemberDerivativeThree(), i)));
+            }
+        } else {
+            System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" +
+                    "The provision is unacceptable.");
         }
     }
 }

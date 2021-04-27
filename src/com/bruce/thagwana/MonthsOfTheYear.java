@@ -6,21 +6,21 @@ import java.util.Objects;
 public class MonthsOfTheYear {
 
     private final boolean federalHoliday;
-    private final int dateOfTheWeek;
     private final int calendarYear;
     private final String time;
     private final Benefits remuneration;
     private final ArrayList<String> months;
     private final ArrayList<String> dayOfTheWeek;
+    private final ArrayList<Integer> payDay;
 
-    public MonthsOfTheYear(boolean federalHoliday, int dateOfTheWeek, int calendarYear, String time, Benefits remuneration) {
+    public MonthsOfTheYear(boolean federalHoliday, int calendarYear, String time, Benefits remuneration) {
         this.federalHoliday = federalHoliday;
-        this.dateOfTheWeek = dateOfTheWeek;
         this.calendarYear = calendarYear;
         this.time = time;
         this.remuneration = remuneration;
         this.months = new ArrayList<>();
         this.dayOfTheWeek = new ArrayList<>();
+        this.payDay = new ArrayList<>();
     }
 
     public void setCurrentMonth() {
@@ -45,21 +45,23 @@ public class MonthsOfTheYear {
     public void salaryWithBonus(ArrayList<String> months, String calendarMonth) {
         for(int i = 0; i == 0; i++) {
             if(calendarMonth.equals(months.get(11))) {
-                System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + " Total Share: " + incentive(remuneration.getSalary()
-                        + remuneration.getBonus(), i));
+                System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" +
+                        " Total Share: " + String.format("%.2f", incentive(remuneration.getSalary()
+                        + remuneration.getBonus(), i)));            //R%.2f\n
             } else {
-                System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + " Total Share: " + incentive(remuneration.getSalary()
-                        + 0, i));
+                System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" +
+                        " Total Share: " + String.format("%.2f", incentive(remuneration.getSalary()
+                        + 0, i)));
             }
         }
     }
 
     public void printCurrentMonth(ArrayList<String> months, String calendarDivision) {
         if(!Objects.equals(calendarDivision, "December")) {
-            System.out.println("Bonus is paid in " + months.get(11) + " unless otherwise.");
+            System.out.println("Bonus is paid in " + months.get(11) + " unless otherwise. Please file a complaint were necessary.");
         }
         if(calendarDivision.equals(months.get(11))) {
-            System.out.println("Bonus available balance: " + remuneration.getBonus());
+            System.out.println("Bonus balance: " + String.format("%.2f", remuneration.getBonus()));
             System.out.println("\t");
             System.out.println("Bonus will be paid into your account, thank you for your service." + "\n"
                     + "Please remember to report any form of harassment.");
@@ -76,9 +78,47 @@ public class MonthsOfTheYear {
         this.dayOfTheWeek.add(6, "Sunday");
     }
 
-    public void printTimeAndDate(ArrayList<String> dayOfTheWeek, ArrayList<String> months, String presentDay) {
-        if(this.dateOfTheWeek == 24) {
-            System.out.println(dayOfTheWeek.get(4) + ", " + months.get(8) + ", " + getDateOfTheWeek() + ", "
+    public void setPayDay() {
+        this.payDay.add(0, 1);
+        this.payDay.add(1, 2);
+        this.payDay.add(2, 3);
+        this.payDay.add(3, 4);
+        this.payDay.add(4, 5);
+        this.payDay.add(5, 6);
+        this.payDay.add(6, 7);
+        this.payDay.add(7, 8);
+        this.payDay.add(8, 9);
+        this.payDay.add(9, 10);
+        this.payDay.add(10, 11);
+        this.payDay.add(11, 12);
+        this.payDay.add(12, 13);
+        this.payDay.add(13, 14);
+        this.payDay.add(14, 15);
+        this.payDay.add(15, 16);
+        this.payDay.add(16, 17);
+        this.payDay.add(17, 18);
+        this.payDay.add(18, 19);
+        this.payDay.add(19, 20);
+        this.payDay.add(20, 21);
+        this.payDay.add(21, 22);
+        this.payDay.add(22, 23);
+        this.payDay.add(23, 24);
+        this.payDay.add(24, 25);
+        this.payDay.add(25, 26);
+        this.payDay.add(26, 27);
+        this.payDay.add(27, 28);
+        this.payDay.add(28, 29);
+        this.payDay.add(29, 30);
+        this.payDay.add(30, 31);
+    }
+
+    public void printTimeAndDate(ArrayList<String> dayOfTheWeek, ArrayList<String> months, ArrayList<Integer> payDay,
+                                 String presentDay, String monthUnit, int mayDay) {
+        int currentDayOfWeek = dayOfTheWeek.indexOf(presentDay);
+        int currentMonth = months.indexOf(monthUnit);
+        int payable = payDay.indexOf(mayDay);
+        if(currentDayOfWeek >= 0 && currentMonth >= 0 && payable >= 0) {
+            System.out.println(getDayOfTheWeek().get(currentDayOfWeek) + ", " + getMonths().get(currentMonth) + ", " + getPayDay().get(mayDay) + ", "
                     + getCalendarYear() + ", " + getTime());
         } else {
             System.out.println("End of the financial year, better luck next year.");
@@ -100,10 +140,6 @@ public class MonthsOfTheYear {
         return federalHoliday;
     }
 
-    public int getDateOfTheWeek() {
-        return dateOfTheWeek;
-    }
-
     public int getCalendarYear() {
         return calendarYear;
     }
@@ -118,5 +154,9 @@ public class MonthsOfTheYear {
 
     public ArrayList<String> getDayOfTheWeek() {
         return dayOfTheWeek;
+    }
+
+    public ArrayList<Integer> getPayDay() {
+        return payDay;
     }
 }
