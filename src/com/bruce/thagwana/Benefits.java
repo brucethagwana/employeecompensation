@@ -61,6 +61,7 @@ public class Benefits {
                 5 - Quit the application""");
     }
 
+    //
     public void requisition() {
         Scanner request = new Scanner(System.in);
         double lunchRequisition = 200;
@@ -81,10 +82,11 @@ public class Benefits {
         boolean processing = false;
 
         System.out.println("Would you like to claim the company benefits.");
-        System.out.println("Payment will be deposited into the company employee card.");
+        System.out.println("Payment will be deposited into the company employee account.");
         answer = request.nextLine();
 
-        if(answer.equals("Yes") || (answer.equals("yes") || (answer.equals("Y") || (answer.equals("y"))))) {
+        if(answer.equals("Yes") || (answer.equals("yes") || (answer.equals("YeS") || (answer.equals("yEs") || (answer.equals("YEs") ||
+                (answer.equals("yES") || (answer.equals("yeS") || (answer.equals("YES") || (answer.equals("Y") || (answer.equals("y"))))))))))) {
             while (!processing) {
                 userOptions();
                 System.out.println("\t");
@@ -109,11 +111,11 @@ public class Benefits {
                                 if(this.houseAllowance == 7970000) {
                                     processing = true;
                                     System.out.println("Sorry, you are no longer allowed to make a requisition. " + "\n" +
-                                            "Payment will be deposited into the company employee card.");
+                                            "Payment will be deposited into the company employee account.");
                                 }
                             } else {
                                 processing = true;
-                                System.out.println("Payment will be deposited into the company employee card.");
+                                System.out.println("Payment will be deposited into the company employee account.");
                             }
                         } else {
                             System.out.println("The house allowance transactions only accept a 30000 requisition.");
@@ -135,7 +137,7 @@ public class Benefits {
                         System.out.println("Please enter an amount of 35000?");
                         study = request.nextDouble();
                         request.nextLine();
-                        if (study >= 35000) {
+                        if (study == 35000) {
                             System.out.println("\t");
                             System.out.println("Study fees available balance: " + String.format("%.2f", study));
                             System.out.println("Study fees balance: " + String.format("%.2f", studyFeesAllowance -= study));
@@ -146,11 +148,11 @@ public class Benefits {
                                 if(this.studyFeesAllowance <= 1465000) {
                                     processing = true;
                                     System.out.println("Sorry, you are no longer allowed to make a requisition. " + "\n" +
-                                            "Payment will be deposited into the company employee card.");
+                                            "Payment will be deposited into the company employee account.");
                                 }
                             } else {
                                 processing = true;
-                                System.out.println("Payment will be deposited into the company employee card.");
+                                System.out.println("Payment will be deposited into the company employee account.");
                             }
                         } else {
                             System.out.println("Study fees transactions only accept a 35000 requisition.");
@@ -161,6 +163,7 @@ public class Benefits {
                                 System.out.println("\t");
                                 System.out.println("Study fees available balance: " + String.format("%.2f", study));
                                 System.out.println("Study fees balance: " + String.format("%.2f", studyFeesAllowance -= study) + "\n");
+                                processing = true;
                             } else {
                                 System.out.println("Goodbye!!! keep away from the streets." + "\n");
                             }
@@ -171,7 +174,7 @@ public class Benefits {
                         System.out.println("Please enter an amount of 1500?");
                         petrol = request.nextDouble();
                         request.nextLine();
-                        if (petrol >= 1500) {
+                        if (petrol == 1500) {
                             System.out.println("\t");
                             System.out.println("Petrol available balance: " + String.format("%.2f", petrol));
                             System.out.println("Petrol balance: " + String.format("%.2f", petrolAllowance -= petrol));
@@ -182,11 +185,11 @@ public class Benefits {
                                 if(this.petrolAllowance <= 98500) {
                                     processing = true;
                                     System.out.println("Sorry, you are no longer allowed to make a requisition. " + "\n" +
-                                            "Payment will be deposited into the company employee card.");
+                                            "Payment will be deposited into the company employee account.");
                                 }
                             } else {
                                 processing = true;
-                                System.out.println("Payment will be deposited into the company employee card.");
+                                System.out.println("Payment will be deposited into the company employee account.");
                             }
                         } else {
                             System.out.println("Petrol transactions only accept 1500 requisition.");
@@ -197,6 +200,7 @@ public class Benefits {
                                 System.out.println("\t");
                                 System.out.println("Petrol fees available balance: " + String.format("%.2f", petrol));
                                 System.out.println("Petrol balance: " + String.format("%.2f", petrolAllowance -= petrol) + "\n");
+                                processing = true;
                             } else {
                                 System.out.println("Goodbye!!! keep away from the streets." + "\n");
                             }
@@ -287,9 +291,15 @@ public class Benefits {
     }
 
     public void finalRequisition() {
+        if(house == 30000 || study == 35000 || petrol == 1500) {
             System.out.println("House Allowance available balance: " + String.format("%.2f", house));
             System.out.println("Study fees available balance: " + String.format("%.2f", study));
             System.out.println("Petrol available balance: " + String.format("%.2f", petrol));
+        } else {
+            System.out.println("House Allowance available balance: " + String.format("%.2f", 0.00));
+            System.out.println("Study fees available balance: " + String.format("%.2f", 0.00));
+            System.out.println("Petrol available balance: " + String.format("%.2f", 0.00));
+        }
     }
 
     public double decemberDerivativeThree() {
