@@ -15,6 +15,18 @@ public class Benefits {
     private final MonthsOfTheYear planetaryMonth;
     private final Balance equaliser;
     double house, study, petrol;
+//    private double lunchRequisition;
+//    private double salonRequisition;
+//    private double uberRequisition;
+//    private double uberEatsRequisition;
+//    private double iTunesRequisition;
+//    private double appleStoreRequisition;
+//    private double sterKinekorRequisition;
+//    private double netflixRequisition;
+//    private double playStoreRequisition;
+//    private double playMusicRequisition;
+//    private double microsoftStoreRequisition;
+//    private double OtherSoftwareRequisitions;
 
     public Benefits(double salary, double bonus, double medicalInsurance, double petrolAllowance, double houseAllowance,
                     double funeralAllowance, double studyFeesAllowance, double otherAllowances, MonthsOfTheYear planetaryMonth,
@@ -107,15 +119,18 @@ public class Benefits {
                             System.out.println("\t");
                             System.out.println("Would you like to make another requisition?");
                             answer = request.nextLine();
-                            if(answer.equals("Yes") || (answer.equals("yes") || (answer.equals("Y") || (answer.equals("y"))))) {
+                            if(answer.equals("Yes") || (answer.equals("yes") || (answer.equals("YeS") || (answer.equals("yEs") || (answer.equals("YEs") ||
+                                    (answer.equals("yES") || (answer.equals("yeS") || (answer.equals("YES") || (answer.equals("Y") || (answer.equals("y"))))))))))) {
                                 if(this.houseAllowance == 7970000) {
                                     processing = true;
                                     System.out.println("Sorry, you are no longer allowed to make a requisition. " + "\n" +
-                                            "Payment will be deposited into the company employee account.");
+                                            "Benefit will be deposited into the company employee account.");
+                                    System.out.println("Salary has been deposited into your account. Thank your for your service.");
                                 }
                             } else {
                                 processing = true;
-                                System.out.println("Payment will be deposited into the company employee account.");
+                                System.out.println("Benefit will be deposited into the company employee account.");
+                                System.out.println("Salary has been deposited into your account. Thank your for your service.");
                             }
                         } else {
                             System.out.println("The house allowance transactions only accept a 30000 requisition.");
@@ -144,15 +159,18 @@ public class Benefits {
                             System.out.println("\t");
                             System.out.println("Would you like to make another requisition?");
                             answer = request.nextLine();
-                            if(answer.equals("Yes") || (answer.equals("yes") || (answer.equals("Y") || (answer.equals("y"))))) {
-                                if(this.studyFeesAllowance <= 1465000) {
+                            if(answer.equals("Yes") || (answer.equals("yes") || (answer.equals("YeS") || (answer.equals("yEs") || (answer.equals("YEs") ||
+                                    (answer.equals("yES") || (answer.equals("yeS") || (answer.equals("YES") || (answer.equals("Y") || (answer.equals("y"))))))))))) {
+                                if(this.studyFeesAllowance == 1465000) {
                                     processing = true;
                                     System.out.println("Sorry, you are no longer allowed to make a requisition. " + "\n" +
-                                            "Payment will be deposited into the company employee account.");
+                                            "Benefit will be deposited into the company employee account.");
+                                    System.out.println("Salary has been deposited into your account. Thank your for your service.");
                                 }
                             } else {
                                 processing = true;
-                                System.out.println("Payment will be deposited into the company employee account.");
+                                System.out.println("Benefit will be deposited into the company employee account.");
+                                System.out.println("Salary has been deposited into your account. Thank your for your service.");
                             }
                         } else {
                             System.out.println("Study fees transactions only accept a 35000 requisition.");
@@ -181,15 +199,18 @@ public class Benefits {
                             System.out.println("\t");
                             System.out.println("Would you like to make another requisition?");
                             answer = request.nextLine();
-                            if(answer.equals("Yes") || (answer.equals("yes") || (answer.equals("Y") || (answer.equals("y"))))) {
-                                if(this.petrolAllowance <= 98500) {
+                            if(answer.equals("Yes") || (answer.equals("yes") || (answer.equals("YeS") || (answer.equals("yEs") || (answer.equals("YEs") ||
+                                    (answer.equals("yES") || (answer.equals("yeS") || (answer.equals("YES") || (answer.equals("Y") || (answer.equals("y"))))))))))) {
+                                if(this.petrolAllowance == 98500) {
                                     processing = true;
                                     System.out.println("Sorry, you are no longer allowed to make a requisition. " + "\n" +
-                                            "Payment will be deposited into the company employee account.");
+                                            "Benefit will be deposited into the company employee account.");
+                                    System.out.println("Salary has been deposited into your account. Thank your for your service.");
                                 }
                             } else {
                                 processing = true;
-                                System.out.println("Payment will be deposited into the company employee account.");
+                                System.out.println("Benefit will be deposited into the company employee account.");
+                                System.out.println("Salary has been deposited into your account. Thank your for your service.");
                             }
                         } else {
                             System.out.println("Petrol transactions only accept 1500 requisition.");

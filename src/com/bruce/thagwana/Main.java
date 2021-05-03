@@ -9,24 +9,23 @@ public class Main {
         EmployeeDetails employeeDetails = new EmployeeDetails("######", "##########", "######.##########@######.com", 11111111,
                 "Artificial General Intelligence");
 
-        Benefits rewards = new Benefits(288000, 288000, 216, 100000, 8000000, 216, 15000000, 5500000, null, null);
-        Benefits aid = new Benefits(288000, 288000, 216, 100000, 8000000, 216, 1500000, 5500000, null, null);
-        Benefits acquire = new Benefits(288000, 288000, 216, 100000, 8000000, 216, 1500000, 5500000, null, null);
+        Benefits rewards = new Benefits(288000, 0, 216, 100000, 8000000, 216, 15000000, 5500000, null, null);
+        Benefits aid = new Benefits(288000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, null, null);
+        Benefits acquire = new Benefits(288000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, null, null);
 
-        Balance equaliser = new Balance(576000, rewards);
-        Balance equate = new Balance(576000, rewards);
-        Balance proportion = new Balance(576000, rewards);
-        Balance symmetry = new Balance(576000, rewards);
+        Balance equaliser = new Balance(288000, rewards);
+        Balance equate = new Balance(288000, rewards);
+        Balance proportion = new Balance(288000, rewards);
+        Balance symmetry = new Balance(288000, rewards);
 
         MonthsOfTheYear planetaryMonth = new MonthsOfTheYear(false, 2021, "00:00", null);
 
-        Benefits remuneration = new Benefits(288000, 288000, 216, 100000, 8000000, 216, 1500000, 5500000, planetaryMonth, equaliser);
-        Benefits profits = new Benefits(288000, 288000, 216, 100000, 8000000, 216, 1500000, 5500000, planetaryMonth, equaliser);
-        Benefits benefits = new Benefits(288000, 288000, 216, 100000, 8000000, 216, 1500000, 5500000, planetaryMonth, equaliser);
+        Benefits remuneration = new Benefits(288000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, planetaryMonth, equaliser);
+        Benefits profits = new Benefits(288000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, planetaryMonth, equaliser);
+        Benefits benefits = new Benefits(288000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, planetaryMonth, equaliser);
 
         MonthsOfTheYear subSynodicMonth = new MonthsOfTheYear(false, 2021, "00:00", remuneration);
         MonthsOfTheYear solarMonth = new MonthsOfTheYear(false, 2021, "00:00", remuneration);
-        MonthsOfTheYear timeUnit = new MonthsOfTheYear(false, 2021, "00:00", remuneration);
         MonthsOfTheYear monthsOfTheYear = new MonthsOfTheYear(false, 2021, "00:00", remuneration);
 
         OtherDeductions gains = new OtherDeductions(216, 0, subSynodicMonth, symmetry, aid);
@@ -35,9 +34,9 @@ public class Main {
         Deductions welfare = new Deductions(216, 216, otherDeductions, solarMonth, proportion, acquire);
         Deductions deductions = new Deductions(216, 216, otherDeductions, solarMonth, proportion, acquire);
 
-        Assets assets = new Assets(profits, welfare, gains, equate, timeUnit);
+        Assets assets = new Assets(profits, welfare, gains, equate);
 
-        Balance balance = new Balance(576000, rewards);
+        Balance balance = new Balance(288000, rewards);
 
         EmployeeInfo employeeInfo = new EmployeeInfo(benefits, balance, deductions, otherDeductions, employeeDetails, monthsOfTheYear, assets);
 
@@ -53,40 +52,41 @@ public class Main {
         employeeInfo.getMonthsOfTheYear().setPlanetaryDay();
         employeeInfo.getMonthsOfTheYear().setPayDay();
         employeeInfo.getMonthsOfTheYear().printTimeAndDate(monthsOfTheYear.getDayOfTheWeek(), monthsOfTheYear.getMonths(),
-                monthsOfTheYear.getPayDay(), "Friday", "December", 16);
+                monthsOfTheYear.getPayDay(), "Tuesday", "May", 24);
         System.out.println("\t");
         System.out.println("------------------------------Employee Balance Before Deductions---------------------------");
         employeeInfo.getBenefits().Salary();
-        employeeInfo.getMonthsOfTheYear().printCurrentMonth(monthsOfTheYear.getMonths(), "December");
+        employeeInfo.getMonthsOfTheYear().printCurrentMonth(monthsOfTheYear.getMonths(), "May");
         System.out.println("\t");
         System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "---------------------------");
-        employeeInfo.getMonthsOfTheYear().salaryWithBonus(monthsOfTheYear.getMonths(), "December");
+        employeeInfo.getMonthsOfTheYear().salaryWithBonus(monthsOfTheYear.getMonths(), "May");
         System.out.println("\t");
         System.out.println("-------------------------------------------------------------------------------------------");
         System.out.println("---------------------------------Employee Deductions---------------------------------------");
         System.out.println("Current Employee Contributions.");
-        employeeInfo.getAssets().accessionOne();
+        employeeInfo.getAssets().setAttainedInterest();
+        employeeInfo.getAssets().accessionOne(assets.getTimeUnit(), 5.0);
         System.out.println("\t");
         System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "-----------------------------------");
-        employeeInfo.getAssets().aggregateOne();
+        employeeInfo.getAssets().aggregateOne(assets.getTimeUnit(), 5.0);
         System.out.println("\t");
         System.out.println("---------------------------------Mandatory Deductions--------------------------------------");
         employeeInfo.getDeductions().getSolarMonth().setCurrentMonth();
         employeeInfo.getOtherDeductions().getSubSynodicMonth().setCurrentMonth();
-        employeeInfo.getDeductions().synthesisOne("December");
-        employeeInfo.getOtherDeductions().synthesisTwo("December");
+        employeeInfo.getDeductions().synthesisOne("May");
+        employeeInfo.getOtherDeductions().synthesisTwo("May");
         System.out.println("\t");
         System.out.println("-------------------------------------------------------------------------------------------");
         System.out.println("-----------------------------------Employee Insurance--------------------------------------");
         System.out.println("Current Employee Contributions.");
-        employeeInfo.getAssets().accessionTwo();
+        employeeInfo.getAssets().accessionTwo(assets.getTimeUnit(), 5.0);
         System.out.println("\t");
         System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "---------------------------------------");
-        employeeInfo.getAssets().aggregateTwo();
+        employeeInfo.getAssets().aggregateTwo(assets.getTimeUnit(), 5.0);
         System.out.println("\t");
         System.out.println("---------------------------------Optional Contributions------------------------------------");
         employeeInfo.getBenefits().getPlanetaryMonth().setCurrentMonth();
-        employeeInfo.getBenefits().synthesisThree("December");
+        employeeInfo.getBenefits().synthesisThree("May");
         System.out.println("\t");
         System.out.println("-------------------------------------------------------------------------------------------");
         System.out.println("----------------------------------Company Contributions------------------------------------");
