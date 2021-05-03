@@ -52,13 +52,13 @@ public class Assets {
     public void accessionOne(ArrayList<Double> timeUnit, double succeededMonth) {
         for(double d = timeUnit.indexOf(succeededMonth) - 1.0; d < timeUnit.indexOf(succeededMonth); d++) {
             if(equate.getAvailableBalance() == profits.getSalary()) {
-                System.out.println("UIF: " + String.format("%.2f", interestRate(welfare.decemberDerivativeOne(), timeUnit.indexOf(succeededMonth))));        //timeUnit.get(i)
+                System.out.println("UIF: " + String.format("%.2f", interestRate(welfare.decemberDerivativeOne(), timeUnit.indexOf(succeededMonth))));
                 System.out.println("SARS: " + String.format("%.2f", interestRate(welfare.decemberDerivativeOne(), timeUnit.indexOf(succeededMonth))));
                 System.out.println("Provident Fund: " + String.format("%.2f", interestRate(gains.decemberDerivativeTwo(), timeUnit.indexOf(succeededMonth))));
                 System.out.println("Other Diminutions: " + String.format("%.2f", assetsOtherDiminutions()));
                 System.out.println("Other Taxation Processing.");
             } else if(equate.getAvailableBalance() == profits.getSalary() + profits.getBonus()) {
-                System.out.println("UIF: " + String.format("%.2f", interestRate(welfare.decemberDerivativeOne(), timeUnit.indexOf(succeededMonth))));      //attainedMonth(foundMonth)
+                System.out.println("UIF: " + String.format("%.2f", interestRate(welfare.decemberDerivativeOne(), timeUnit.indexOf(succeededMonth))));
                 System.out.println("SARS: " + String.format("%.2f", interestRate(welfare.decemberDerivativeOne(), timeUnit.indexOf(succeededMonth))));
                 System.out.println("Provident Fund: " + String.format("%.2f", interestRate(gains.decemberDerivativeTwo(), timeUnit.indexOf(succeededMonth))));
                 System.out.println("Other Diminutions: " + String.format("%.2f", assetsOtherDiminutions()));
