@@ -321,8 +321,17 @@ public class Benefits {
 //                                processing = true;
                             }
                         }
-                        processing = true;
-                        System.out.println("Voucher has been sent to your e-mail.");
+                        if(otherCommodity.equals("Lunch") || otherCommodity.equals("Salon") || otherCommodity.equals("Uber") ||
+                                otherCommodity.equals("Uber eats") || otherCommodity.equals("iTunes") || otherCommodity.equals("App Store") ||
+                                otherCommodity.equals("Ster-Kinekor") || otherCommodity.equals("netflix") || otherCommodity.equals("Play Store") ||
+                                otherCommodity.equals("Play music") || otherCommodity.equals("Showmax") || otherCommodity.equals("Prime Video") ||
+                                otherCommodity.equals("Microsoft Store") || otherCommodity.equals("Other Software")) {
+                            processing = true;
+                            System.out.println("Voucher has been sent to your e-mail.");
+                        } else {
+                            processing = true;
+                        }
+
                     }
                     case 5 -> {
                         processing = true;
