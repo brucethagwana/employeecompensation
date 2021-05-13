@@ -9,9 +9,12 @@ public class Main {
         EmployeeDetails employeeDetails = new EmployeeDetails("######", "##########", "######.##########@######.com", 11111111,
                 "Artificial General Intelligence");
 
-        Benefits rewards = new Benefits(288000, 0, 216, 100000, 8000000, 216, 15000000, 5500000, null, null);
-        Benefits aid = new Benefits(288000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, null, null);
-        Benefits acquire = new Benefits(288000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, null, null);
+        Benefits rewards = new Benefits(288000, 0, 216, 100000, 8000000, 216, 15000000, 5500000, 200, 3500, 1000, 300, 1000, 1000, 600, 600,
+                500, 500, 2000, 1500, 500, 15000, null, null);
+        Benefits aid = new Benefits(288000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, 200, 3500, 1000, 300, 1000, 1000, 600, 600, 500,
+                2000, 2000, 1500, 500, 15000, null, null);
+        Benefits acquire = new Benefits(288000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, 200, 3500, 1000, 300, 1000, 1000, 600, 600, 500,
+                500, 2000, 1500, 500, 15000, null, null);
 
         Balance equaliser = new Balance(288000, rewards);
         Balance equate = new Balance(288000, rewards);
@@ -20,9 +23,12 @@ public class Main {
 
         MonthsOfTheYear planetaryMonth = new MonthsOfTheYear(false, 2021, "00:00", null);
 
-        Benefits remuneration = new Benefits(288000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, planetaryMonth, equaliser);
-        Benefits profits = new Benefits(288000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, planetaryMonth, equaliser);
-        Benefits benefits = new Benefits(288000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, planetaryMonth, equaliser);
+        Benefits remuneration = new Benefits(288000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, 200, 3500, 1000, 300, 1000, 1000, 600, 600,
+                500, 500, 2000, 1500, 500, 15000, planetaryMonth, equaliser);
+        Benefits profits = new Benefits(288000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, 200, 3500, 1000, 300, 1000, 1000, 600, 600, 500,
+                500, 2000, 1500, 500, 15000, planetaryMonth, equaliser);
+        Benefits benefits = new Benefits(288000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, 200, 3500, 1000, 300, 1000, 1000, 600, 600, 500,
+                500, 2000, 1500, 500, 15000, planetaryMonth, equaliser);
 
         MonthsOfTheYear subSynodicMonth = new MonthsOfTheYear(false, 2021, "00:00", remuneration);
         MonthsOfTheYear solarMonth = new MonthsOfTheYear(false, 2021, "00:00", remuneration);
@@ -101,6 +107,7 @@ public class Main {
         } catch (ArithmeticException | NoSuchElementException e) {
             System.out.println(e);
             System.out.println("Ineffective operation. Beware of the bullies, Goodbye!!!.");
+            System.out.println("Salary has been deposited into your account. Thank your for your service.");
         }
         System.out.println("\t");
         System.out.println("-------------------------------------------------------------------------------------------");

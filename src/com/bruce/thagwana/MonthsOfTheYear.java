@@ -47,7 +47,7 @@ public class MonthsOfTheYear {
             if(calendarMonth.equals(months.get(11))) {
                 System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" +
                         " Total Share: " + String.format("%.2f", incentive(remuneration.getSalary()
-                        + remuneration.getBonus(), i)));            //R%.2f\n
+                        + remuneration.getBonus(), i)));
             } else {
                 System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" +
                         " Total Share: " + String.format("%.2f", incentive(remuneration.getSalary()

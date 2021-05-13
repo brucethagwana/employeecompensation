@@ -156,7 +156,7 @@ public class Balance {
                     (this.availableBalance == doubleArrayList.get(82)));
         }
         System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + " Nett Pay: " +
-                String.format("%.2f", this.availableBalance));        //R%.2f\n
+                String.format("%.2f", this.availableBalance));
     }
 
     public double getAvailableBalance() {

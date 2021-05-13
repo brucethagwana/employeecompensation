@@ -31,7 +31,6 @@ public class Assets {
         this.timeUnit.add(9.0);
         this.timeUnit.add(10.0);
         this.timeUnit.add(11.0);
-//        this.timeUnit.add(12.0);
         this.timeUnit.add(13.0);
     }
 
@@ -39,7 +38,7 @@ public class Assets {
         if(equate.getAvailableBalance() == profits.getSalary()) {
             return amount * intRate;
         } else if(equate.getAvailableBalance() == profits.getSalary() + profits.getBonus()) {
-            return amount * intRate / 2;
+            return amount * intRate / 2.0;
         } else {
             return 0;
         }

@@ -15,21 +15,30 @@ public class Benefits {
     private final MonthsOfTheYear planetaryMonth;
     private final Balance equaliser;
     double house, study, petrol;
-//    private double lunchRequisition;
-//    private double salonRequisition;
-//    private double uberRequisition;
-//    private double uberEatsRequisition;
-//    private double iTunesRequisition;
-//    private double appleStoreRequisition;
-//    private double sterKinekorRequisition;
-//    private double netflixRequisition;
-//    private double playStoreRequisition;
-//    private double playMusicRequisition;
-//    private double microsoftStoreRequisition;
-//    private double OtherSoftwareRequisitions;
+    private final double lunchRequisition;
+    private final double salonRequisition;
+    private final double uberRequisition;
+    private final double uberEatsRequisition;
+    private final double iTunesRequisition;
+    private final double appleStoreRequisition;
+    private final double sterKinekorRequisition;
+    private final double netflixRequisition;
+    private final double playStoreRequisition;
+    private final double playMusicRequisition;
+    private final double showmaxRequisition;
+    private final double PrimeVideoRequisition;
+    private final double microsoftStoreRequisition;
+    private final double OtherSoftwareRequisitions;
+    int commodity;
+    String otherCommodity;
+    String answer;
+    boolean processing = false;
 
     public Benefits(double salary, double bonus, double medicalInsurance, double petrolAllowance, double houseAllowance,
-                    double funeralAllowance, double studyFeesAllowance, double otherAllowances, MonthsOfTheYear planetaryMonth,
+                    double funeralAllowance, double studyFeesAllowance, double otherAllowances, double lunchRequisition,
+                    double salonRequisition, double uberRequisition, double uberEatsRequisition, double iTunesRequisition,
+                    double appleStoreRequisition, double sterKinekorRequisition, double netflixRequisition, double playStoreRequisition,
+                    double playMusicRequisition, double showmaxRequisition, double PrimeVideoRequisition, double microsoftStoreRequisition, double OtherSoftwareRequisitions, MonthsOfTheYear planetaryMonth,
                     Balance equaliser) {
         this.salary = salary;
         this.bonus = bonus;
@@ -41,6 +50,20 @@ public class Benefits {
         this.otherAllowances = otherAllowances;
         this.planetaryMonth = planetaryMonth;
         this.equaliser = equaliser;
+        this.lunchRequisition = lunchRequisition;
+        this.salonRequisition = salonRequisition;
+        this.uberRequisition = uberRequisition;
+        this.uberEatsRequisition = uberEatsRequisition;
+        this.iTunesRequisition = iTunesRequisition;
+        this.appleStoreRequisition = appleStoreRequisition;
+        this.sterKinekorRequisition = sterKinekorRequisition;
+        this.netflixRequisition = netflixRequisition;
+        this.playStoreRequisition = playStoreRequisition;
+        this.playMusicRequisition = playMusicRequisition;
+        this.showmaxRequisition = showmaxRequisition;
+        this.PrimeVideoRequisition = PrimeVideoRequisition;
+        this.microsoftStoreRequisition = microsoftStoreRequisition;
+        this.OtherSoftwareRequisitions = OtherSoftwareRequisitions;
     }
 
     public void Salary() {
@@ -70,29 +93,11 @@ public class Benefits {
                 2 - Study Fees.
                 3 - Petrol Allowance.
                 4 - Other Allowances.
-                5 - Quit the application""");
+                5 - Quit the application.""");
     }
 
-    //
     public void requisition() {
         Scanner request = new Scanner(System.in);
-        double lunchRequisition = 200;
-        double salonRequisition = 3500;
-        double uberRequisition = 1000;
-        double uberEatsRequisition = 300;
-        double iTunesRequisition = 1000;
-        double appleStoreRequisition = 1000;
-        double sterKinekorRequisition = 600;
-        double netflixRequisition = 600;
-        double playStoreRequisition = 500;
-        double playMusicRequisition = 500;
-        double microsoftStoreRequisition = 500;
-        double OtherSoftwareRequisitions = 15000;
-        int commodity;
-        String otherCommodity;
-        String answer;
-        boolean processing = false;
-
         System.out.println("Would you like to claim the company benefits.");
         System.out.println("Payment will be deposited into the company employee account.");
         answer = request.nextLine();
@@ -102,7 +107,7 @@ public class Benefits {
             while (!processing) {
                 userOptions();
                 System.out.println("\t");
-                System.out.println("Please choose your option?");
+                System.out.println("Please choose your option using only the digits 1 to 5?");
                 commodity = request.nextInt();
                 request.nextLine();
 
@@ -141,10 +146,13 @@ public class Benefits {
                                 System.out.println("\t");
                                 System.out.println("House Allowance available balance: " + String.format("%.2f", house));
                                 System.out.println("House Allowance balance: " + String.format("%.2f", houseAllowance -= house) + "\n");
-                                processing = true;
+
+                                System.out.println("Benefit will be deposited into the company employee account.");
+                                System.out.println("Salary has been deposited into your account. Thank your for your service.");
                             } else {
                                 System.out.println("Goodbye!!! keep away from the streets." + "\n");
                             }
+                            processing = true;
                         }
                     }
                     case 2 -> {
@@ -181,10 +189,13 @@ public class Benefits {
                                 System.out.println("\t");
                                 System.out.println("Study fees available balance: " + String.format("%.2f", study));
                                 System.out.println("Study fees balance: " + String.format("%.2f", studyFeesAllowance -= study) + "\n");
-                                processing = true;
+
+                                System.out.println("Benefit will be deposited into the company employee account.");
+                                System.out.println("Salary has been deposited into your account. Thank your for your service.");
                             } else {
                                 System.out.println("Goodbye!!! keep away from the streets." + "\n");
                             }
+                            processing = true;
                         }
                     }
                     case 3 -> {
@@ -217,14 +228,17 @@ public class Benefits {
                             System.out.println("Please enter an amount of 1500.");
                             petrol = request.nextDouble();
                             request.nextLine();
-                            if (petrol == 1500) {
+                            if(petrol == 1500) {
                                 System.out.println("\t");
                                 System.out.println("Petrol fees available balance: " + String.format("%.2f", petrol));
                                 System.out.println("Petrol balance: " + String.format("%.2f", petrolAllowance -= petrol) + "\n");
-                                processing = true;
+
+                                System.out.println("Benefit will be deposited into the company employee account.");
+                                System.out.println("Salary has been deposited into your account. Thank your for your service.");
                             } else {
                                 System.out.println("Goodbye!!! keep away from the streets." + "\n");
                             }
+                            processing = true;
                         }
                     }
                     case 4 -> {
@@ -244,6 +258,8 @@ public class Benefits {
                                 netflix
                                 Play Store
                                 Play music
+                                Showmax
+                                Prime Video
                                 Microsoft Store
                                 Other Software""");
                         System.out.println("What would you like to request?");
@@ -260,10 +276,12 @@ public class Benefits {
                             case "netflix" -> System.out.println("netflix voucher available balance: " + String.format("%.2f", netflixRequisition) + "\n");
                             case "Play Store" -> System.out.println("Play Store voucher available balance: " + String.format("%.2f", playStoreRequisition) + "\n");
                             case "Play music" -> System.out.println("Play music voucher available balance: " + String.format("%.2f", playMusicRequisition) + "\n");
+                            case "Showmax" -> System.out.println("Showmax voucher available balance: " + String.format("%.2f", showmaxRequisition) + "\n");
+                            case "Prime Video" -> System.out.println("Prime Video voucher available balance: " + String.format("%.2f", PrimeVideoRequisition) + "\n");
                             case "Microsoft Store" -> System.out.println("Microsoft Store voucher available balance: " + String.format("%.2f", microsoftStoreRequisition) + "\n");
                             case "Other Software" -> System.out.println("Other Software voucher available balance: " + String.format("%.2f", OtherSoftwareRequisitions) + "\n");
                             default -> {
-                                System.out.println("Unavailable requisition. Please enter an available requisition." + "\n");
+                                System.out.println("Unavailable requisition. Please type an available requisition." + "\n");
                                 System.out.println("""
                                         The available products are as follows:
                                         Lunch
@@ -276,6 +294,8 @@ public class Benefits {
                                         netflix
                                         Play Store
                                         Play music
+                                        Showmax
+                                        Prime Video
                                         Microsoft Store
                                         Other Software""");
                                 System.out.println("Please choose a product?");
@@ -292,18 +312,26 @@ public class Benefits {
                                     case "netflix" -> System.out.println("netflix voucher available balance: " + String.format("%.2f", netflixRequisition) + "\n");
                                     case "Play Store" -> System.out.println("Play Store voucher available balance: " + String.format("%.2f", playStoreRequisition) + "\n");
                                     case "Play music" -> System.out.println("Play music voucher available balance: " + String.format("%.2f", playMusicRequisition) + "\n");
+                                    case "Showmax" -> System.out.println("Showmax voucher available balance: " + String.format("%.2f", showmaxRequisition) + "\n");
+                                    case "Prime Video" -> System.out.println("Prime Video voucher available balance: " + String.format("%.2f", PrimeVideoRequisition) + "\n");
                                     case "Microsoft Store" -> System.out.println("Microsoft Store voucher available balance: " + String.format("%.2f", microsoftStoreRequisition) + "\n");
                                     case "Other Software" -> System.out.println("Other Software voucher available balance: " + String.format("%.2f", OtherSoftwareRequisitions) + "\n");
                                     default -> System.out.println("Goodbye!!! keep away from the streets." + "\n");
                                 }
+//                                processing = true;
                             }
                         }
+                        processing = true;
+                        System.out.println("Voucher has been sent to your e-mail.");
                     }
                     case 5 -> {
                         processing = true;
                         System.out.println("Salary has been deposited into your account. Thank your for your service.");
                     }
-                    default -> System.out.println("You have to attend proper reading lessons." + "\n");
+                    default -> {
+                        processing = true;
+                        System.out.println("You have to attend proper reading lessons. Goodbye!!!" + "\n");
+                    }
                 }
             }
         } else {
