@@ -58,7 +58,7 @@ public class Main {
         employeeInfo.getMonthsOfTheYear().setPlanetaryDay();
         employeeInfo.getMonthsOfTheYear().setPayDay();
         employeeInfo.getMonthsOfTheYear().printTimeAndDate(monthsOfTheYear.getDayOfTheWeek(), monthsOfTheYear.getMonths(),
-                monthsOfTheYear.getPayDay(), "Tuesday", "August", 25);
+                monthsOfTheYear.getPayDay(), "Wednesday", "August", 24);
         System.out.println("\t");
         System.out.println("------------------------------Employee Balance Before Deductions---------------------------");
         employeeInfo.getBenefits().Salary();
