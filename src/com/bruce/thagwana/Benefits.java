@@ -30,8 +30,7 @@ public class Benefits {
     private final double microsoftStoreRequisition;
     private final double OtherSoftwareRequisitions;
     int commodity;
-    String otherCommodity;
-    String answer;
+    String otherCommodity, answer;
     boolean processing = false;
 
     public Benefits(double salary, double bonus, double medicalInsurance, double petrolAllowance, double houseAllowance,
@@ -150,7 +149,8 @@ public class Benefits {
                                 System.out.println("Benefit will be deposited into the company employee account.");
                                 System.out.println("Salary has been deposited into your account. Thank your for your service.");
                             } else {
-                                System.out.println("Goodbye!!! keep away from the streets." + "\n");
+                                System.out.println("Goodbye!!! keep away from the streets." + "\n" +
+                                        "Salary has been deposited into your account. Thank your for your service.");
                             }
                             processing = true;
                         }
@@ -193,7 +193,8 @@ public class Benefits {
                                 System.out.println("Benefit will be deposited into the company employee account.");
                                 System.out.println("Salary has been deposited into your account. Thank your for your service.");
                             } else {
-                                System.out.println("Goodbye!!! keep away from the streets." + "\n");
+                                System.out.println("Goodbye!!! keep away from the streets." + "\n" +
+                                        "Salary has been deposited into your account. Thank your for your service.");
                             }
                             processing = true;
                         }
@@ -236,7 +237,8 @@ public class Benefits {
                                 System.out.println("Benefit will be deposited into the company employee account.");
                                 System.out.println("Salary has been deposited into your account. Thank your for your service.");
                             } else {
-                                System.out.println("Goodbye!!! keep away from the streets." + "\n");
+                                System.out.println("Goodbye!!! keep away from the streets." + "\n" +
+                                        "Salary has been deposited into your account. Thank your for your service.");
                             }
                             processing = true;
                         }

@@ -123,7 +123,7 @@ public class MonthsOfTheYear {
         } else {
             System.out.println("End of the financial year, better luck next year.");
         }
-        if ((presentDay.equals(dayOfTheWeek.get(0))) || (presentDay.equals(dayOfTheWeek.get(1))) || (presentDay.equals(dayOfTheWeek.get(2)))
+        if((presentDay.equals(dayOfTheWeek.get(0))) || (presentDay.equals(dayOfTheWeek.get(1))) || (presentDay.equals(dayOfTheWeek.get(2)))
                 || (presentDay.equals(dayOfTheWeek.get(3)) || (presentDay.equals(dayOfTheWeek.get(4))))) {
             System.out.println("Your account has been credited.");
         } else if((presentDay.equals(dayOfTheWeek.get(5))) || (presentDay.equals(dayOfTheWeek.get(6)))) {
@@ -131,7 +131,7 @@ public class MonthsOfTheYear {
         } else{
             System.out.println("The holiday will never frighten you.");
         }
-        if (isFederalHoliday()){
+        if(isFederalHoliday()){
             System.out.println("It's a good thing that you just got served earlier than you expected. Enjoy!!!");
         }
     }
