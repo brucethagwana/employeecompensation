@@ -2,6 +2,7 @@ package com.bruce.thagwana;
 
 import java.util.ArrayList;
 import java.util.Objects;
+//import java.time.LocalDateTime;
 
 public class MonthsOfTheYear {
 
@@ -22,7 +23,7 @@ public class MonthsOfTheYear {
         this.dayOfTheWeek = new ArrayList<>();
         this.payDay = new ArrayList<>();
     }
-
+    //calendar months.
     public void setCurrentMonth() {
         this.months.add(0, "January");
         this.months.add(1, "February");
@@ -37,11 +38,11 @@ public class MonthsOfTheYear {
         this.months.add(10, "November");
         this.months.add(11, "December");
     }
-
+    //sets for zero operations.
     public double incentive (double earnings, double dividend) {
         return earnings + dividend;
     }
-
+    //computes total share.
     public void salaryWithBonus(ArrayList<String> months, String calendarMonth) {
         for(int i = 0; i == 0; i++) {
             if(calendarMonth.equals(months.get(11))) {
@@ -55,7 +56,7 @@ public class MonthsOfTheYear {
             }
         }
     }
-
+    //public holiday definitions.
     public void printCurrentMonth(ArrayList<String> months, String calendarDivision) {
         if(!Objects.equals(calendarDivision, "December")) {
             System.out.println("Bonus is paid in " + months.get(11) + " unless otherwise. Please file a complaint were necessary.");
@@ -67,7 +68,7 @@ public class MonthsOfTheYear {
                     + "Please remember to report any form of harassment.");
         }
     }
-
+    //calender days of the week.
     public void setPlanetaryDay() {
         this.dayOfTheWeek.add(0, "Monday");
         this.dayOfTheWeek.add(1, "Tuesday");
@@ -77,7 +78,7 @@ public class MonthsOfTheYear {
         this.dayOfTheWeek.add(5, "Saturday");
         this.dayOfTheWeek.add(6, "Sunday");
     }
-
+    //calender dates.
     public void setPayDay() {
         this.payDay.add(0, 1);
         this.payDay.add(1, 2);
@@ -111,7 +112,7 @@ public class MonthsOfTheYear {
         this.payDay.add(29, 30);
         this.payDay.add(30, 31);
     }
-
+    //current date definitions.
     public void printTimeAndDate(ArrayList<String> dayOfTheWeek, ArrayList<String> months, ArrayList<Integer> payDay,
                                  String presentDay, String monthUnit, int mayDay) {
         int currentDayOfWeek = dayOfTheWeek.indexOf(presentDay);

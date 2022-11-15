@@ -11,7 +11,6 @@ public class Benefits {
     private double houseAllowance;
     private final double funeralAllowance;
     private double studyFeesAllowance;
-    private final double otherAllowances;
     private final MonthsOfTheYear planetaryMonth;
     private final Balance equaliser;
     double house, study, petrol;
@@ -46,7 +45,6 @@ public class Benefits {
         this.houseAllowance = houseAllowance;
         this.funeralAllowance = funeralAllowance;
         this.studyFeesAllowance = studyFeesAllowance;
-        this.otherAllowances = otherAllowances;
         this.planetaryMonth = planetaryMonth;
         this.equaliser = equaliser;
         this.lunchRequisition = lunchRequisition;
@@ -65,23 +63,23 @@ public class Benefits {
         this.OtherSoftwareRequisitions = OtherSoftwareRequisitions;
     }
 
-    public void Salary() {
+    public void salary() {
         System.out.println("Salary balance: " + String.format("%.2f", salary));
     }
 
-    public void PetrolAllowance() {
+    public void petrolAllowance() {
         System.out.println("\t" + "Petrol Allowance.");
     }
 
-    public void HouseAllowance() {
+    public void houseAllowance() {
         System.out.println("\t" + "House Allowance.");
     }
 
-    public void StudyFeesAllowance() {
+    public void studyFeesAllowance() {
         System.out.println("\t" + "Study Fees.");
     }
 
-    public void OtherAllowances() {
+    public void otherAllowances() {
         System.out.println("\t" + "Other Allowances.");
     }
 

@@ -61,7 +61,7 @@ public class Main {
                 monthsOfTheYear.getPayDay(), "Wednesday", "August", 24);
         System.out.println("\t");
         System.out.println("------------------------------Employee Balance Before Deductions---------------------------");
-        employeeInfo.getBenefits().Salary();
+        employeeInfo.getBenefits().salary();
         employeeInfo.getMonthsOfTheYear().printCurrentMonth(monthsOfTheYear.getMonths(), "August");
         System.out.println("\t");
         System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "---------------------------");
@@ -97,17 +97,17 @@ public class Main {
         System.out.println("-------------------------------------------------------------------------------------------");
         System.out.println("----------------------------------Company Contributions------------------------------------");
         System.out.println("------Company Benefits------");
-        employeeInfo.getBenefits().HouseAllowance();
-        employeeInfo.getBenefits().StudyFeesAllowance();
-        employeeInfo.getBenefits().PetrolAllowance();
-        employeeInfo.getBenefits().OtherAllowances();
+        employeeInfo.getBenefits().houseAllowance();
+        employeeInfo.getBenefits().studyFeesAllowance();
+        employeeInfo.getBenefits().petrolAllowance();
+        employeeInfo.getBenefits().otherAllowances();
         System.out.println("\t");
         try {
             employeeInfo.getBenefits().requisition();
         } catch (ArithmeticException | NoSuchElementException e) {
             System.out.println(e);
             System.out.println("Ineffective operation. Beware of the bullies, Goodbye!!!.");
-            System.out.println("Salary has been deposited into your account. Thank your for your service.");
+            System.out.println("Salary has been deposited into your account. Thank you for your service.");
         }
         System.out.println("\t");
         System.out.println("-------------------------------------------------------------------------------------------");
@@ -117,7 +117,7 @@ public class Main {
         employeeInfo.getBalance().setSalaryRange();
         System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "-----------------------");
         if(employeeInfo.getBalance().getAvailableBalance() == rewards.getSalary() + rewards.getBonus()) {
-            employeeInfo.getBalance().printDeductedSalaryAmount(balance.getDoubleArrayList());
+            employeeInfo.getBalance().printDeductedSalaryAmount();
         } else {
             System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "Nix.");
         }
