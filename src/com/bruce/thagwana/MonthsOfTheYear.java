@@ -68,7 +68,7 @@ public class MonthsOfTheYear {
                     + "Please remember to report any form of harassment.");
         }
     }
-    //calender days of the week.
+    //calendar days of the week.
     public void setPlanetaryDay() {
         this.dayOfTheWeek.add(0, "Monday");
         this.dayOfTheWeek.add(1, "Tuesday");
