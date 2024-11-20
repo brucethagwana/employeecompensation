@@ -78,7 +78,7 @@ public class MonthsOfTheYear {
         this.dayOfTheWeek.add(5, "Saturday");
         this.dayOfTheWeek.add(6, "Sunday");
     }
-    //calender dates.
+    //calendar dates.
     public void setPayDay() {
         this.payDay.add(0, 1);
         this.payDay.add(1, 2);
