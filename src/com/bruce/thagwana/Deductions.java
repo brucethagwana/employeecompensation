@@ -51,4 +51,8 @@ public class Deductions {
     public MonthsOfTheYear getSolarMonth() {
         return solarMonth;
     }
+
+    public OtherDeductions getOtherDeductions() {
+        return otherDeductions;
+    }
 }

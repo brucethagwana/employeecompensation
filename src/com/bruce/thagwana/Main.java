@@ -9,30 +9,30 @@ public class Main {
         EmployeeDetails employeeDetails = new EmployeeDetails("######", "##########", "######.##########@######.com", 11111111,
                 "Artificial General Intelligence");
 
-        Benefits rewards = new Benefits(288000, 0, 216, 100000, 8000000, 216, 15000000, 5500000, 200, 3500, 1000, 300, 1000, 1000, 600, 600,
+        Benefits rewards = new Benefits(576000, 0, 216, 100000, 8000000, 216, 15000000, 5500000, 200, 3500, 1000, 300, 1000, 1000, 600, 600,
                 500, 500, 2000, 1500, 500, 15000, null, null);
-        Benefits aid = new Benefits(288000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, 200, 3500, 1000, 300, 1000, 1000, 600, 600, 500,
+        Benefits aid = new Benefits(576000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, 200, 3500, 1000, 300, 1000, 1000, 600, 600, 500,
                 2000, 2000, 1500, 500, 15000, null, null);
-        Benefits acquire = new Benefits(288000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, 200, 3500, 1000, 300, 1000, 1000, 600, 600, 500,
+        Benefits acquire = new Benefits(576000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, 200, 3500, 1000, 300, 1000, 1000, 600, 600, 500,
                 500, 2000, 1500, 500, 15000, null, null);
 
-        Balance equaliser = new Balance(288000, rewards);
-        Balance equate = new Balance(288000, rewards);
-        Balance proportion = new Balance(288000, rewards);
-        Balance symmetry = new Balance(288000, rewards);
+        Balance equaliser = new Balance(576000, rewards);
+        Balance equate = new Balance(576000, rewards);
+        Balance proportion = new Balance(576000, rewards);
+        Balance symmetry = new Balance(576000, rewards);
 
-        MonthsOfTheYear planetaryMonth = new MonthsOfTheYear(false, 2021, "00:00", null);
+        MonthsOfTheYear planetaryMonth = new MonthsOfTheYear(false, 2024, "00:00", null);
 
-        Benefits remuneration = new Benefits(288000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, 200, 3500, 1000, 300, 1000, 1000, 600, 600,
+        Benefits remuneration = new Benefits(576000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, 200, 3500, 1000, 300, 1000, 1000, 600, 600,
                 500, 500, 2000, 1500, 500, 15000, planetaryMonth, equaliser);
-        Benefits profits = new Benefits(288000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, 200, 3500, 1000, 300, 1000, 1000, 600, 600, 500,
+        Benefits profits = new Benefits(576000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, 200, 3500, 1000, 300, 1000, 1000, 600, 600, 500,
                 500, 2000, 1500, 500, 15000, planetaryMonth, equaliser);
-        Benefits benefits = new Benefits(288000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, 200, 3500, 1000, 300, 1000, 1000, 600, 600, 500,
+        Benefits benefits = new Benefits(576000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, 200, 3500, 1000, 300, 1000, 1000, 600, 600, 500,
                 500, 2000, 1500, 500, 15000, planetaryMonth, equaliser);
 
-        MonthsOfTheYear subSynodicMonth = new MonthsOfTheYear(false, 2021, "00:00", remuneration);
-        MonthsOfTheYear solarMonth = new MonthsOfTheYear(false, 2021, "00:00", remuneration);
-        MonthsOfTheYear monthsOfTheYear = new MonthsOfTheYear(false, 2021, "00:00", remuneration);
+        MonthsOfTheYear subSynodicMonth = new MonthsOfTheYear(false, 2024, "00:00", remuneration);
+        MonthsOfTheYear solarMonth = new MonthsOfTheYear(false, 2024, "00:00", remuneration);
+        MonthsOfTheYear monthsOfTheYear = new MonthsOfTheYear(false, 2024, "00:00", remuneration);
 
         OtherDeductions gains = new OtherDeductions(216, 0, subSynodicMonth, symmetry, aid);
         OtherDeductions otherDeductions = new OtherDeductions(216, 0, subSynodicMonth, symmetry, aid);
@@ -42,7 +42,7 @@ public class Main {
 
         Assets assets = new Assets(profits, welfare, gains, equate);
 
-        Balance balance = new Balance(288000, rewards);
+        Balance balance = new Balance(576000, rewards);
 
         EmployeeInfo employeeInfo = new EmployeeInfo(benefits, balance, deductions, otherDeductions, employeeDetails, monthsOfTheYear, assets);
 
@@ -58,14 +58,14 @@ public class Main {
         employeeInfo.getMonthsOfTheYear().setPlanetaryDay();
         employeeInfo.getMonthsOfTheYear().setPayDay();
         employeeInfo.getMonthsOfTheYear().printTimeAndDate(monthsOfTheYear.getDayOfTheWeek(), monthsOfTheYear.getMonths(),
-                monthsOfTheYear.getPayDay(), "Wednesday", "August", 24);
+                monthsOfTheYear.getPayDay(), "Wednesday", "November", 26);
         System.out.println("\t");
         System.out.println("------------------------------Employee Balance Before Deductions---------------------------");
         employeeInfo.getBenefits().salary();
-        employeeInfo.getMonthsOfTheYear().printCurrentMonth(monthsOfTheYear.getMonths(), "August");
+        employeeInfo.getMonthsOfTheYear().printCurrentMonth(monthsOfTheYear.getMonths(), "November");
         System.out.println("\t");
         System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "---------------------------");
-        employeeInfo.getMonthsOfTheYear().salaryWithBonus(monthsOfTheYear.getMonths(), "August");
+        employeeInfo.getMonthsOfTheYear().salaryWithBonus(monthsOfTheYear.getMonths(), "November");
         System.out.println("\t");
         System.out.println("-------------------------------------------------------------------------------------------");
         System.out.println("---------------------------------Employee Deductions---------------------------------------");
@@ -79,8 +79,8 @@ public class Main {
         System.out.println("---------------------------------Mandatory Deductions--------------------------------------");
         employeeInfo.getDeductions().getSolarMonth().setCurrentMonth();
         employeeInfo.getOtherDeductions().getSubSynodicMonth().setCurrentMonth();
-        employeeInfo.getDeductions().synthesisOne("August");
-        employeeInfo.getOtherDeductions().synthesisTwo("August");
+        employeeInfo.getDeductions().synthesisOne("November");
+        employeeInfo.getOtherDeductions().synthesisTwo("November");
         System.out.println("\t");
         System.out.println("-------------------------------------------------------------------------------------------");
         System.out.println("-----------------------------------Employee Insurance--------------------------------------");
@@ -92,7 +92,7 @@ public class Main {
         System.out.println("\t");
         System.out.println("---------------------------------Optional Contributions------------------------------------");
         employeeInfo.getBenefits().getPlanetaryMonth().setCurrentMonth();
-        employeeInfo.getBenefits().synthesisThree("August");
+        employeeInfo.getBenefits().synthesisThree("November");
         System.out.println("\t");
         System.out.println("-------------------------------------------------------------------------------------------");
         System.out.println("----------------------------------Company Contributions------------------------------------");
@@ -114,7 +114,7 @@ public class Main {
         System.out.println("--------------Requisitions--------------");
         employeeInfo.getBenefits().finalRequisition();
         System.out.println("\t");
-        employeeInfo.getBalance().setSalaryRange();
+        employeeInfo.getBalance().setSalaryRange(576000);
         System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "-----------------------");
         if(employeeInfo.getBalance().getAvailableBalance() == rewards.getSalary() + rewards.getBonus()) {
             employeeInfo.getBalance().printDeductedSalaryAmount();
