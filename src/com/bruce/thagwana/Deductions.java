@@ -48,11 +48,11 @@ public class Deductions {
         return TAX;
     }
 
-    public MonthsOfTheYear getSolarMonth() {
-        return solarMonth;
-    }
-
     public OtherDeductions getOtherDeductions() {
         return otherDeductions;
+    }
+
+    public MonthsOfTheYear getSolarMonth() {
+        return solarMonth;
     }
 }

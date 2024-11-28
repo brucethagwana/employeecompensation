@@ -7,7 +7,6 @@ public class Balance {
     private final Benefits rewards;
 
     public Balance(double availableBalance, Benefits rewards) {
-        //this.treasure = treasure;
         this.availableBalance = availableBalance;
         this.rewards = rewards;
     }
