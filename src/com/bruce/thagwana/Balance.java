@@ -6,7 +6,8 @@ public class Balance {
     private double availableBalance;
     private final Benefits rewards;
 
-    public Balance(double availableBalance, Benefits rewards) {
+    public Balance(double treasure, double availableBalance, Benefits rewards) {
+        this.treasure = treasure;
         this.availableBalance = availableBalance;
         this.rewards = rewards;
     }

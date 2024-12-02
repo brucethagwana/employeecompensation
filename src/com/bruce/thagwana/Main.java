@@ -16,10 +16,10 @@ public class Main {
         Benefits acquire = new Benefits(576000, 0, 216, 100000, 8000000, 216, 1500000, 5500000, 200, 3500, 1000, 300, 1000, 1000, 600, 600, 500,
                 500, 2000, 1500, 500, 15000, null, null);
 
-        Balance equaliser = new Balance(576000, rewards);
-        Balance equate = new Balance(576000, rewards);
-        Balance proportion = new Balance(576000, rewards);
-        Balance symmetry = new Balance(576000, rewards);
+        Balance equaliser = new Balance(576000, 576000, rewards);
+        Balance equate = new Balance(576000, 576000, rewards);
+        Balance proportion = new Balance(576000, 576000, rewards);
+        Balance symmetry = new Balance(576000, 576000, rewards);
 
         MonthsOfTheYear planetaryMonth = new MonthsOfTheYear(false, 2024, "00:00", null);
 
@@ -42,7 +42,7 @@ public class Main {
 
         Assets assets = new Assets(profits, welfare, gains, equate);
 
-        Balance balance = new Balance(576000, rewards);
+        Balance balance = new Balance(576000, 576000, rewards);
 
         EmployeeInfo employeeInfo = new EmployeeInfo(benefits, balance, deductions, otherDeductions, employeeDetails, monthsOfTheYear, assets);
 
