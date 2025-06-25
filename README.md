@@ -32,7 +32,7 @@ For a deeper understanding of our architectural approach, please refer to the **
 
 ## Features
 
-* **Accurate Tax Levy Calculations:** Core engine designe for high precision in complex tax rule application.
+* **Accurate Tax Levy Calculations:** Core engine designed for high precision in complex tax rule application.
 * **Immutable Transaction History:** Complete audit trail of all financial events related to tax obligation.
 * **Optimized reporting:** Fast and flexible generation of various tax-related reports and dashboards from MongoDB read models.
 * **Scalable Architecture:** Designed to handle increasing volumes of financial data and tax rules.
