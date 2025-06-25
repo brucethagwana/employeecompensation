@@ -1,5 +1,16 @@
 ![Static Badge](https://img.shields.io/badge/Java-%20%23f89820%20?style=for-the-badge&logo=Java)
 ![Static Badge](https://img.shields.io/badge/IntelliJ%20IDEA-%230047E4?style=for-the-badge&logo=IntelliJ%20IDEA&logoColor=%23000000&labelColor=%23FFFFFF)
+![Static Badge](https://img.shields.io/badge/Spring%20Boot-%236DB33F?style=for-the-badge&logo=Spring%20Boot&labelColor=%23FFFFFF)
+![Static Badge](https://img.shields.io/badge/Apache%20Maven-%23C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=%23812878&labelColor=%23FFFFFF)
+![Static Badge](https://img.shields.io/badge/git%20-%23F05032?style=for-the-badge&logo=git&labelColor=%23FFFFFF)
+![Static Badge](https://img.shields.io/badge/Neo4j-%23014063?style=for-the-badge&logo=Neo4j&logoColor=%23014063&labelColor=%23FFFFFF)
+![Static Badge](https://img.shields.io/badge/MongoDB-%2300684A?style=for-the-badge&logo=MongoDB&logoColor=%2300684A&labelColor=%23FFFFFF)
+![Static Badge](https://img.shields.io/badge/GraphQL-%23E10098?style=for-the-badge&logo=GraphQL&logoColor=%23E10098&labelColor=%23FFFFFF)
+
+
+
+
+
 
 
 # Fiscal: Employee Compensation; Precision Tax Levy Management
