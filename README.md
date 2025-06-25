@@ -1,5 +1,3 @@
-https://img.shields.io/badge/IntelliJ%20IDEA-%23003D6D?style=for-the-badge&logo=IntelliJ%20IDEA&logoColor=%23FFFFFF&labelColor=%23000000 https://img.shields.io/badge/Apache%20Maven-%23C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=%2326235b https://img.shields.io/badge/Spring%20boot-%236DB33F?style=for-the-badge&logoColor=White https://img.shields.io/badge/Java-%20%23f89820%20?style=for-the-badge&logo=Java https://img.shields.io/badge/git-%23F05032?style=for-the-badge&logo=git&logoColor=white https://img.shields.io/badge/Neo4j-%234581C3?style=for-the-badge&logo=Neo4j&logoColor=%23181414 https://img.shields.io/badge/MongoDB-%2347A248?style=for-the-badge&logo=MongoDB&logoColor=%23C1BEBC https://img.shields.io/badge/GraphQL-%23E10098?style=for-the-badge&logo=GraphQL&logoColor=%23161e26
-
 # Fiscal: Employee Compensation; Precision Tax Levy Management
 
 Welcome to **Fiscal**, a robust platform engineered for the precise calculation, management, and reporting of tax levies. This repository contains the core services that ensure the accuracy and audibility of all finacial transactions related to tax obligations.
