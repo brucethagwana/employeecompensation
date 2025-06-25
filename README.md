@@ -7,12 +7,6 @@
 ![Static Badge](https://img.shields.io/badge/MongoDB-%2300684A?style=for-the-badge&logo=MongoDB&logoColor=%2300684A&labelColor=%23FFFFFF)
 ![Static Badge](https://img.shields.io/badge/GraphQL-%23E10098?style=for-the-badge&logo=GraphQL&logoColor=%23E10098&labelColor=%23FFFFFF)
 
-
-
-
-
-
-
 # Fiscal: Employee Compensation; Precision Tax Levy Management
 
 Welcome to **Fiscal**, a robust platform engineered for the precise calculation, management, and reporting of tax levies. This repository contains the core services that ensure the accuracy and audibility of all finacial transactions related to tax obligations.
@@ -55,7 +49,7 @@ This project is fundamentally designed around the **Command Query Responsibility
 
 For a comprehensive understanding of these architectural patterns and our approach, we highly recommend the following resources:
 
-* **Bob Reselman's Red Hat, Inc. illustrated guide to CQRS data patterns:** A fundational resource covering the intricacies of CQRS in depth. [https://redhat.com/en/blog/illustrated-cqrs](https://redhat.com/en/blog/illustrated-cqrs)
+* **Bob Reselman's Red Hat, Inc. an illustrated guide to CQRS data patterns:** A fundational resource covering the intricacies of CQRS in depth. [https://redhat.com/en/blog/illustrated-cqrs](https://redhat.com/en/blog/illustrated-cqrs)
 * **Martin Fowler's Event Sourcing article:** An excellent seminal piece providing a clear explanation of Event Sourcing Fundamentals. [https://martinfowler.com/eaaDev/EventSourcing.html](https://martinfowler.com/eaaDev/EventSourcing.html)
 
 We also adhere to principles of **Domain-Driven Design (DDD)** to ensure our models accurately reflect the complexities of tax law and finacial regulations, fostering a shared undestanding between domain experts and developers.
