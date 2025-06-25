@@ -1,4 +1,5 @@
 ![Static Badge](https://img.shields.io/badge/Java-%20%23f89820%20?style=for-the-badge&logo=Java)
+![Static Badge](https://img.shields.io/badge/IntelliJ%20IDEA-%230047E4?style=for-the-badge&logo=IntelliJ%20IDEA&logoColor=%23000000&labelColor=%23FFFFFF)
 
 
 # Fiscal: Employee Compensation; Precision Tax Levy Management
@@ -71,7 +72,7 @@ Ensure you have the following installed and configured:
 
 ## Usage
 
-### License / Credit
+### License / Credits
 
 This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
 
