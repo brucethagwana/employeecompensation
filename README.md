@@ -1,3 +1,6 @@
+![Static Badge](https://img.shields.io/badge/Java-%20%23f89820%20?style=for-the-badge&logo=Java)
+
+
 # Fiscal: Employee Compensation; Precision Tax Levy Management
 
 Welcome to **Fiscal**, a robust platform engineered for the precise calculation, management, and reporting of tax levies. This repository contains the core services that ensure the accuracy and audibility of all finacial transactions related to tax obligations.
