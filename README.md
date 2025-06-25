@@ -18,11 +18,11 @@ For a deeper understanding of our architectural approach, please refer to the **
 * [Features](#features)
 * [Architecture](#architecture)
 * [Getting Started](#getting-started)
-    *[Prerequisites](#prerequisites)
-    *[Installation](#installation)
-    *[Running the Application](#running-the-application)
-*[Usage](#usage)
-*[License](#license)
+    * [Prerequisites](#prerequisites)
+    * [Installation](#installation)
+    * [Running the Application](#running-the-application)
+* [Usage](#usage)
+* [License](#license)
 
 ## Features
 
