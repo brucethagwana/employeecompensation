@@ -9,7 +9,7 @@
 
 # Fiscal: Employee Compensation; Precision Tax Levy Management
 
-Welcome to **Fiscal**, a robust platform engineered for the precise calculation, management, and reporting of tax levies. This repository contains the core services that ensure the accuracy and audibility of all finacial transactions related to tax obligations.
+Welcome to **Fiscal**, a robust platform engineered for the precise calculation, management, and reporting of tax levies. This repository contains the core services that ensure the accuracy and audibility of all financial transactions related to tax obligations.
 
 At the heart of our architecture lies a powerful combination of **Command Query Responsibility Segregation (CQRS)** and **Event Sourcing**. This strategic choice empowers us to:
 
@@ -51,10 +51,10 @@ This project is fundamentally designed around the **Command Query Responsibility
 
 For a comprehensive understanding of these architectural patterns and our approach, we highly recommend the following resources:
 
-* **Bob Reselman's Red Hat, Inc. an illustrated guide to CQRS data patterns:** A fundational resource covering the intricacies of CQRS in depth. [https://redhat.com/en/blog/illustrated-cqrs](https://redhat.com/en/blog/illustrated-cqrs)
+* **Bob Reselman's Red Hat, Inc. an illustrated guide to CQRS data patterns:** A foundational resource covering the intricacies of CQRS in depth. [https://redhat.com/en/blog/illustrated-cqrs](https://redhat.com/en/blog/illustrated-cqrs)
 * **Martin Fowler's Event Sourcing article:** An excellent seminal piece providing a clear explanation of Event Sourcing Fundamentals. [https://martinfowler.com/eaaDev/EventSourcing.html](https://martinfowler.com/eaaDev/EventSourcing.html)
 
-We also adhere to principles of **Domain-Driven Design (DDD)** to ensure our models accurately reflect the complexities of tax law and financial regulations, fostering a shared undestanding between domain experts and developers.
+We also adhere to principles of **Domain-Driven Design (DDD)** to ensure our models accurately reflect the complexities of tax law and financial regulations, fostering a shared understanding between domain experts and developers.
 
 ## Getting Started
 
