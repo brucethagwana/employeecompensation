@@ -36,7 +36,7 @@ For a deeper understanding of our architectural approach, please refer to the **
 * **Immutable Transaction History:** Complete audit trail of all financial events related to tax obligation.
 * **Optimized reporting:** Fast and flexible generation of various tax-related reports and dashboards from MongoDB read models.
 * **Scalable Architecture:** Designed to handle increasing volumes of financial data and tax rules.
-* **[Add other key features specific to your app, e.g., "Integration with external tax APIs", "User Management for Taxpayers", etx.]**  
+* **[Add other key features specific to your app, e.g., "Integration with external tax APIs", "User Management for Taxpayers", etc.]**  
 
 ## Architecture
 
