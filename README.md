@@ -34,10 +34,10 @@ For a deeper understanding of our architectural approach, please refer to the **
 
 * **Accurate Tax Levy Calculations:** Core engine designed for high precision in complex tax rule application.
 * **Immutable Transaction History:** Complete audit trail of all financial events related to tax obligation.
-* **Optimized reporting:** Fast and flexible generation of various tax-related reports and dashboards from MongoDB read models.
+* **Optimized Reporting:** Fast and flexible generation of various tax-related reports and dashboards from MongoDB read models.
 * **Scalable Architecture:** Designed to handle increasing volumes of financial data and tax rules.
-* **Robust functionalities designed to meet your business needs, including:**
-   * Seamless integration with external Tax APIs: Easily connect to external tax calculations services for real-time tax assessment and compliance.
+* **Robust Functionalities designed to meet your business needs, including:**
+   * Seamless Integration with external Tax APIs: Easily connect to external tax calculations services for real-time tax assessment and compliance.
    * Comprehensive User Management for Taxpayers, ensuring secure and personalized experiences.
 
 ## Architecture
