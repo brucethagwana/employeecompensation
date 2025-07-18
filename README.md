@@ -5,6 +5,7 @@
 ![Static Badge](https://img.shields.io/badge/git%20-%23F05032?style=for-the-badge&logo=git&labelColor=%23FFFFFF)
 ![Static Badge](https://img.shields.io/badge/Neo4j-%23014063?style=for-the-badge&logo=Neo4j&logoColor=%23014063&labelColor=%23FFFFFF)
 ![Static Badge](https://img.shields.io/badge/MongoDB-%2300684A?style=for-the-badge&logo=MongoDB&logoColor=%2300684A&labelColor=%23FFFFFF)
+![Mongoose ODM](https://img.shields.io/badge/Mongoose-ODM-800000?style=for-the-badge&logo=mongoose&logoColor=white)
 ![Static Badge](https://img.shields.io/badge/GraphQL-%23E10098?style=for-the-badge&logo=GraphQL&logoColor=%23E10098&labelColor=%23FFFFFF)
 
 # Fiscal: Employee Compensation; Precision Tax Levy Management
