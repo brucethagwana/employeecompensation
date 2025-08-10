@@ -29,7 +29,7 @@ For a deeper understanding of our architectural approach, please refer to the **
     * [Installation](#installation)
     * [Running the Application](#running-the-application)
 * [Usage](#usage)
-* [License](#license)
+* [License](https://github.com/brucethagwana/employeecompensation/blob/main/LICENSE)
 
 ## Features
 
@@ -82,6 +82,6 @@ Ensure you have the following installed and configured:
 
 ### License/Credits
 
-This project is licensed under the [MIT License](#license) - see the [License](#license) file for details.
+This project is licensed under the [MIT License](https://github.com/brucethagwana/employeecompensation/blob/main/LICENSE) - see the [License](https://github.com/brucethagwana/employeecompensation/blob/main/LICENSE) file for details.
 
 
