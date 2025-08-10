@@ -67,7 +67,7 @@ public class Assets {
             }
         }
     }
-    //computes accumulated Insurance balance on a monthly basis.
+    //computes accumulated insurance balance on a monthly basis.
     public void accessionTwo(ArrayList<Double> timeUnit, double succeededMonth) {
         for(double d = timeUnit.indexOf(succeededMonth) - 1.0; d < timeUnit.indexOf(succeededMonth); d++) {
             if(equate.getAvailableBalance() == profits.getSalary()) {
@@ -81,7 +81,7 @@ public class Assets {
             }
         }
     }
-    //computes accumulated Capital Gains on a monthly basis.
+    //computes accumulated capital gains on a monthly basis.
     public void aggregateOne(ArrayList<Double> timeUnit, double succeededMonth) {
         for(double d = timeUnit.indexOf(succeededMonth) - 1.0; d < timeUnit.indexOf(succeededMonth); d++) {
             if(equate.getAvailableBalance() == profits.getSalary()) {
@@ -98,7 +98,7 @@ public class Assets {
             }
         }
     }
-    //computes accumulated Insurance Proceeds on a monthly basis.
+    //computes accumulated insurance proceeds on a monthly basis.
     public void aggregateTwo(ArrayList<Double> timeUnit, double succeededMonth) {
         for(double d = timeUnit.indexOf(succeededMonth) - 1.0; d < timeUnit.indexOf(succeededMonth); d++) {
             if(equate.getAvailableBalance() == profits.getSalary()) {

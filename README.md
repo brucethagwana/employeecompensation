@@ -43,7 +43,7 @@ For a deeper understanding of our architectural approach, please refer to the **
 
 ## Architecture
 
-This project is fundamentally designed around the **Command Query Responsibility Segregation (CQRS)** pattern, significantly enhanced by **Event Sourcing**. This powerful combination is critical for the **Fiscal** app, enabling us to manage complex tax calculations, ensure unparalleled data integrity, and provide a complete, verifiable audit trail for every finacial transaction and levy assessment.
+This project is fundamentally designed around the **Command Query Responsibility Segregation (CQRS)** pattern, significantly enhanced by **Event Sourcing**. This powerful combination is critical for the **Fiscal** app, enabling us to manage complex tax calculations, ensure unparalleled data integrity, and provide a complete, verifiable audit trail for every financial transaction and levy assessment.
 
 * **CQRS:** At its core, CQRS separates the responsibility of **handling commands (data modification)** from **queries (data retrieval)**.
   * The **Command side** (writes) is primarily managed by the **Spring Boot** application, processing business logic and persisting events.
@@ -80,8 +80,8 @@ Ensure you have the following installed and configured:
 
 ## Usage
 
-### License / Credits
+### License/Credits
 
-This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT License](#license) - see the [License](#license) file for details.
 
 
