@@ -13,7 +13,11 @@ public class Balance {
     }
 
     public void setSalaryRange(double treasure) {
-        this.treasure = treasure;
+        if(this.treasure == this.availableBalance) {
+            this.treasure = treasure;
+        } else {
+            System.out.println("Insufficient Funds! ⏳");
+        }
     }
 
     public void printDeductedSalaryAmount() {
@@ -23,6 +27,16 @@ public class Balance {
             this.availableBalance -= this.availableBalance / 100 * 18;
         }
         System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + " Nett Pay: " +
+                String.format("%.2f", this.availableBalance));
+    }
+
+    public void printDeductedPaidTimeOffAmount() {
+        if(this.availableBalance == rewards.getPaidTimeOffAllowance()) {
+            this.availableBalance -= this.availableBalance / 100 * 9;
+        } else if(this.availableBalance == rewards.getPaidTimeOffAllowance() + rewards.getBonus()) {
+            this.availableBalance -= this.availableBalance / 100 * 18;
+        }
+        System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + " Paid Time Off: " +
                 String.format("%.2f", this.availableBalance));
     }
 

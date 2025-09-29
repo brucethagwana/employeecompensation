@@ -33,7 +33,7 @@ public class Assets {
         this.timeUnit.add(11.0);
         this.timeUnit.add(13.0);
     }
-    //interest rate operations.
+    // interest rate operations.
     public double interestRate(double amount, double intRate) {
         if(equate.getAvailableBalance() == profits.getSalary()) {
             return amount * intRate;
@@ -43,11 +43,11 @@ public class Assets {
             return 0;
         }
     }
-    //sets for zero operations.
+    // sets for zero operations.
     public double assetsOtherDiminutions() {
         return 0;
     }
-    //computes taxes on a monthly basis.
+    // computes taxes on a monthly basis.
     public void accessionOne(ArrayList<Double> timeUnit, double succeededMonth) {
         for(double d = timeUnit.indexOf(succeededMonth) - 1.0; d < timeUnit.indexOf(succeededMonth); d++) {
             if(equate.getAvailableBalance() == profits.getSalary()) {
@@ -67,21 +67,33 @@ public class Assets {
             }
         }
     }
-    //computes accumulated insurance balance on a monthly basis.
+    // computes accumulated insurance balance on a monthly basis.
     public void accessionTwo(ArrayList<Double> timeUnit, double succeededMonth) {
         for(double d = timeUnit.indexOf(succeededMonth) - 1.0; d < timeUnit.indexOf(succeededMonth); d++) {
             if(equate.getAvailableBalance() == profits.getSalary()) {
-                System.out.println("Medical Insurance: " + String.format("%.2f", interestRate(profits.decemberDerivativeThree(), timeUnit.indexOf(succeededMonth))));
-                System.out.println("Funeral Allowance: " + String.format("%.2f", interestRate(profits.decemberDerivativeThree(), timeUnit.indexOf(succeededMonth))));
+                System.out.println("Health Insurance: " + String.format("%.2f", interestRate(profits.decemberDerivativeThree(), timeUnit.indexOf(succeededMonth))));
+                System.out.println("Retirement Plans: " + String.format("%.2f", interestRate(profits.decemberDerivativeThree(), timeUnit.indexOf(succeededMonth))));
             } else if(profits.getSalary() + profits.getBonus() == equate.getAvailableBalance()) {
-                System.out.println("Medical Insurance: " + String.format("%.2f", interestRate(profits.decemberDerivativeThree(), timeUnit.indexOf(succeededMonth))));
-                System.out.println("Funeral Allowance: " + String.format("%.2f", interestRate(profits.decemberDerivativeThree(), timeUnit.indexOf(succeededMonth))));
+                System.out.println("Health Insurance: " + String.format("%.2f", interestRate(profits.decemberDerivativeThree(), timeUnit.indexOf(succeededMonth))));
+                System.out.println("Retirement Plans: " + String.format("%.2f", interestRate(profits.decemberDerivativeThree(), timeUnit.indexOf(succeededMonth))));
             } else {
                 System.out.println("The provision is unacceptable.");
             }
         }
     }
-    //computes accumulated capital gains on a monthly basis.
+    // computes employer contributions per requisition.
+    public void contributionOne(ArrayList<Double> timeUnit, double succeededMonth) {
+        for(double d = timeUnit.indexOf(succeededMonth) - 1.0; d < timeUnit.indexOf(succeededMonth); d++) {
+            if(profits.getLifeInsuranceAllowance() + profits.getDisabilityAllowance() + profits.getOtherPerksAllowance() == profits.getEmployerContributions()) {
+                System.out.println("Life Insurance: " + String.format("%.2f", interestRate(profits.decemberDerivativeThree(), timeUnit.indexOf(succeededMonth))));
+                System.out.println("Disability Insurance ('Creative Stultification' in the workplace, etc): " + String.format("%.2f", interestRate(profits.decemberDerivativeThree(), timeUnit.indexOf(succeededMonth))));
+                System.out.println("Other Perks (Gym Membership, Commuter Benefits, Professional Development Stipend, etc): " + String.format("%.2f", interestRate(profits.decemberDerivativeThree(), timeUnit.indexOf(succeededMonth))));
+            } else {
+                System.out.println("The requisition is impossible.");
+            }
+        }
+    }
+    // computes accumulated capital gains on a monthly basis.
     public void aggregateOne(ArrayList<Double> timeUnit, double succeededMonth) {
         for(double d = timeUnit.indexOf(succeededMonth) - 1.0; d < timeUnit.indexOf(succeededMonth); d++) {
             if(equate.getAvailableBalance() == profits.getSalary()) {
@@ -98,7 +110,7 @@ public class Assets {
             }
         }
     }
-    //computes accumulated insurance proceeds on a monthly basis.
+    // computes accumulated insurance proceeds on a monthly basis.
     public void aggregateTwo(ArrayList<Double> timeUnit, double succeededMonth) {
         for(double d = timeUnit.indexOf(succeededMonth) - 1.0; d < timeUnit.indexOf(succeededMonth); d++) {
             if(equate.getAvailableBalance() == profits.getSalary()) {
@@ -112,6 +124,19 @@ public class Assets {
             } else {
                 System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" +
                         "The provision is unacceptable.");
+            }
+        }
+    }
+    // computes accumulated employer contributions per requisition.
+    public void summationOne(ArrayList<Double> timeUnit, double succeededMonth) {
+        for(double d = timeUnit.indexOf(succeededMonth) - 1.0; d < timeUnit.indexOf(succeededMonth); d++) {
+            if(profits.getLifeInsuranceAllowance() + profits.getDisabilityAllowance() + profits.getOtherPerksAllowance() == profits.getEmployerContributions()) {
+                System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" +
+                        " Total Employer Contributions: " + String.format("%.2f", interestRate(welfare.decemberDerivativeOne() +
+                        welfare.decemberDerivativeOne() + gains.decemberDerivativeTwo(), timeUnit.indexOf(succeededMonth))));
+            } else {
+                System.out.println("\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" +
+                        "The requisition is ordinal.");
             }
         }
     }
