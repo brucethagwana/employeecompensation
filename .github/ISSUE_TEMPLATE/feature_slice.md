@@ -2,7 +2,9 @@
 name: Feature Slice / Refactor Task
 about: Refactor legacy Java calculation classes into CQRS/Event Sourcing pipeline
 title: '[Refactor] Convert <LegacyClass.java> to CQRS Event Stream'
-labels: 'refactor, cqrs'
+labels: 
+  - refactor 
+  - cqrs
 ---
 
 ### 📦 Source Code Impact
