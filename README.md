@@ -7,6 +7,7 @@
 ![Static Badge](https://img.shields.io/badge/MongoDB-%2300684A?style=for-the-badge&logo=MongoDB&logoColor=%2300684A&labelColor=%23FFFFFF)
 ![Mongoose ODM](https://img.shields.io/badge/Mongoose-ODM-800000?style=for-the-badge&logo=mongoose&logoColor=white)
 ![Static Badge](https://img.shields.io/badge/GraphQL-%23E10098?style=for-the-badge&logo=GraphQL&logoColor=%23E10098&labelColor=%23FFFFFF)
+![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
 
 # Fiscal: Employee Compensation; Precision Tax Levy Management
 
