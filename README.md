@@ -58,7 +58,7 @@ To avoid non-deterministic outputs common in regulatory AI systems, **Fiscal** a
 For a comprehensive understanding of the design patterns used in this repository:
 * **CQRS Data Patterns:** [Bob Reselman's illustrated guide to CQRS data patterns (Red Hat)](https://redhat.com/en/blog/illustrated-cqrs)
 * **Event Sourcing Fundamentals:** [Martin Fowler's Event Sourcing Article](https://martinfowler.com/eaaDev/EventSourcing.html)
-* **Event Driven Architecture:** [Tim Berglund's Events, Data, and Action (Confluent)](https://www.confluent.io/designing-event-driven-systems/)
+* **Event Driven Architecture Patterns:** [Ben Stopford's Designing Event-Driven Systems (Confluent/O'Reilly)](https://www.confluent.io/designing-event-driven-systems/)
 
 ---
 
