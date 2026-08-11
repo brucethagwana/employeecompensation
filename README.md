@@ -9,54 +9,57 @@
 ![Static Badge](https://img.shields.io/badge/GraphQL-%23E10098?style=for-the-badge&logo=GraphQL&logoColor=%23E10098&labelColor=%23FFFFFF)
 ![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
 
-# Fiscal: Employee Compensation; Precision Tax Levy Management
+# Fiscal: Employee Compensation
 
-Welcome to **Fiscal**, a robust platform engineered for the precise calculation, management, and reporting of tax levies. This repository contains the core services that ensure the accuracy and audibility of all financial transactions related to tax obligations.
+> **Event-driven Agentic AI facilitating strategic dialogue and complex reasoning in global tax policy.**
 
-At the heart of our architecture lies a powerful combination of **Command Query Responsibility Segregation (CQRS)** and **Event Sourcing**. This strategic choice empowers us to:
+Welcome to **Fiscal**, an intelligent platform engineered to combine autonomous agentic reasoning with rigorous tax levy computation. The platform unifies specialized AI capabilities with an immutable, event-sourced backbone, facilitating strategic dialogue, policy simulation, and highly auditable tax compliance modeling across global jurisdictions.
 
-* **Ensure Data Integrity:** By separating command (write) and query (read) models, and by persisting every change as an immutable event, we maintain a highly consistent, verifiable, and auditable state for complex tax rules and financial records.
-* **Optimize for Complex Calculations:** Commands can be specifically designed for the intricate logic required for tax assessments, while Event Sourcing provides a precise historical record of all calculation inputs and outcomes.
-* **Enhance Performance for Auditing & Reporting:** Our read models, stored in MongoDB, are optimized for rapid data retrieval, crucial for generating comprehensive tax reports and enabling quick audits.
-
-For a deeper understanding of our architectural approach, please refer to the **[Architecture](#architecture)** section below.
+---
 
 ## Table of Contents
 
 * [Features](#features)
 * [Architecture](#architecture)
 * [Getting Started](#getting-started)
-    * [Prerequisites](#prerequisites)
-    * [Installation](#installation)
-    * [Running the Application](#running-the-application)
+  * [Prerequisites](#prerequisites)
+* [Installation](#installation)
+* [Running the Application](#running-the-application)
 * [Usage](#usage)
-* [License](https://github.com/brucethagwana/employeecompensation/blob/main/LICENSE)
+* [License](#license)
+
+---
 
 ## Features
 
-* **Accurate Tax Levy Calculations:** Core engine designed for high precision in complex tax rule application.
-* **Immutable Transaction History:** Complete audit trail of all financial events related to tax obligation.
-* **Optimized Reporting:** Fast and flexible generation of various tax-related reports and dashboards from MongoDB read models.
-* **Scalable Architecture:** Designed to handle increasing volumes of financial data and tax rules.
-* **Robust Functionalities designed to meet your business needs, including:**
-   * Seamless Integration with external Tax APIs: Easily connect to external tax calculations services for real-time tax assessment and compliance.
-   * Comprehensive User Management for Taxpayers, ensuring secure and personalized experiences.
+* **Agentic Tax Reasoning:** Autonomous multi-agent dialogue for evaluating dynamic tax scenarios, compliance options, and cross-border policy impacts.
+* **Precision Levy Calculation:** High-precision computational engine designed for applying complex, multi-jurisdictional tax rules and financial logic.
+* **Immutable Event Trail:** Complete historical auditability for all state changes, financial calculations, and policy evaluations.
+* **Graph & Document Projections:** Neo4j graph relationships for tracking policy and domain connections combined with MongoDB read models for fast GraphQL querying.
+* **External Tax API Integration:** Flexible infrastructure to connect with third-party tax calculation services for real-time assessment.
+* **Comprehensive User & Taxpayer Management:** Granular identity management ensuring secure, personalized compliance contexts.
+
+---
 
 ## Architecture
 
-This project is fundamentally designed around the **Command Query Responsibility Segregation (CQRS)** pattern, significantly enhanced by **Event Sourcing**. This powerful combination is critical for the **Fiscal** app, enabling us to manage complex tax calculations, ensure unparalleled data integrity, and provide a complete, verifiable audit trail for every financial transaction and levy assessment.
+To avoid non-deterministic outputs common in regulatory AI systems, **Fiscal** anchors autonomous agent decisions to a deterministic backbone built on **Command Query Responsibility Segregation (CQRS)**, **Event Sourcing**, and **Domain-Driven Design (DDD)**.
 
-* **CQRS:** At its core, CQRS separates the responsibility of **handling commands (data modification)** from **queries (data retrieval)**.
-  * The **Command side** (writes) is primarily managed by the **Spring Boot** application, processing business logic and persisting events.
-  * The **Query side** (reads) leverages **MongoDB** to store denormalized read models, which are efficiently accessed by client applications using **GraphQL**.
-* **Event Sourcing:** Instead of just storing the current state, we persist every change as an immutable sequence of domain events. This provides a complete, granular, and auditable history of all financial activities, which is paramount for regulatory compliance and forensic analysis in the tax domain. Events are then used to update the read models in MongoDB and potentially graph relationships in Neo4j.
+### Core Architectural Pillars
 
-For a comprehensive understanding of these architectural patterns and our approach, we highly recommend the following resources:
+* **Command Query Responsibility Segregation (CQRS):**
+  * **Command Side (Writes):** Managed by **Spring Boot** applications to evaluate domain rules, execute financial commands, and persist state changes as domain events.
+  * **Query Side (Reads):** Denormalized read models are updated asynchronously in **MongoDB** for fast document retrieval and exposed via **GraphQL**.
+* **Event Sourcing & Auditability:** Instead of storing mutated records, every policy evaluation, calculation input, and state change is stored as an immutable sequence of events. This ensures an exact forensic record required for tax regulatory compliance and audit trails.
+* **Graph Context (Neo4j):** Complex relationship structures—such as jurisdictional dependencies, tax policy hierarchies, and employee entity graphs—are projected into **Neo4j** to supply multi-dimensional context to AI agents.
 
-* **Bob Reselman's Red Hat, Inc. an illustrated guide to CQRS data patterns:** A foundational resource covering the intricacies of CQRS in depth. [https://redhat.com/en/blog/illustrated-cqrs](https://redhat.com/en/blog/illustrated-cqrs)
-* **Martin Fowler's Event Sourcing article:** An excellent seminal piece providing a clear explanation of Event Sourcing Fundamentals. [https://martinfowler.com/eaaDev/EventSourcing.html](https://martinfowler.com/eaaDev/EventSourcing.html)
+### Architectural Resources
 
-We also adhere to principles of **Domain-Driven Design (DDD)** to ensure our models accurately reflect the complexities of tax law and financial regulations, fostering a shared understanding between domain experts and developers.
+For a comprehensive understanding of the design patterns used in this repository:
+* **CQRS Data Patterns:** [Bob Reselman's illustrated guide to CQRS data patterns (Red Hat)](https://redhat.com/en/blog/illustrated-cqrs)
+* **Event Sourcing Fundamentals:** [Martin Fowler's Event Sourcing Article](https://martinfowler.com/eaaDev/EventSourcing.html)
+
+---
 
 ## Getting Started
 
@@ -66,23 +69,41 @@ These instructions will get you a copy of the project up and running on your loc
 
 Ensure you have the following installed and configured:
 
-* **Java Development Kit (JDK):** Versions 17 or higher (e.g., OpenJDK).
+* **Java Development Kit (JDK):** Version 17 or higher (e.g., OpenJDK).
 * **Maven:** Version 3.x.x (for building the Spring Boot application).
 * **Neo4j Database:** A running instance of Neo4j (Community Edition is sufficient).
-  * You can run it locally, or via Docker: `docker run --name neo4j -p 7474:7474 -p 7687:7687 -e NEO4J_AUTH=neo4j/password -d neo4j`
+  * You can run it locally, or via Docker:
+    ```bash
+    docker run --name neo4j -p 7474:7474 -p 7687:7687 -e NEO4J_AUTH=neo4j/password -d neo4j
+    ```
 * **MongoDB Database:** A running instance of MongoDB.
-  * You can run it locally, or via Docker: `docker run --name mongodb -p 27017:27017 -d mongo`
-* **Git:** For cloning the repository.
-* **Optional:** A GraphQL client library or tool within your client application for querying MongoDB.
+  * You can run it locally, or via Docker:
+    ```bash
+    docker run --name mongodb -p 27017:27017 -d mongo
+    ```
+* **Git:** For repository management and cloning.
+* **Optional:** A GraphQL client library or browser interface for querying MongoDB read models.
+
+---
 
 ## Installation
 
+```bash
+git clone https://github.com/brucethagwana/employeecompensation.git
+cd employeecompensation
+mvn clean install
+```
+
+---
+
 ## Running the Application
 
-## Usage
+```bash
+mvn spring-boot:run
+```
 
-### License/Credits
+---
+
+## License
 
 This project is licensed under the [MIT License](https://github.com/brucethagwana/employeecompensation/blob/main/LICENSE) - see the [License](https://github.com/brucethagwana/employeecompensation/blob/main/LICENSE) file for details.
-
-
