@@ -56,6 +56,7 @@ To avoid non-deterministic outputs common in regulatory AI systems, **Fiscal** a
 ### Architectural Resources
 
 For a comprehensive understanding of the design patterns used in this repository:
+* **Java Core & Object-Oriented Programming:** [Tim Buchalka's Java Programming Masterclass (Udemy)](https://www.udemy.com/course/java-the-complete-java-developer-course/)
 * **CQRS Data Patterns:** [Bob Reselman's illustrated guide to CQRS data patterns (Red Hat)](https://redhat.com/en/blog/illustrated-cqrs)
 * **Event Sourcing Fundamentals:** [Martin Fowler's Event Sourcing Article](https://martinfowler.com/eaaDev/EventSourcing.html)
 * **Event Driven Architecture Patterns:** [Ben Stopford's Designing Event-Driven Systems (Confluent/O'Reilly)](https://www.confluent.io/designing-event-driven-systems/)
